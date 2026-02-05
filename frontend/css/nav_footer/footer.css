@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arimo", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0F172B;
+}
+
+.footer-conatiner {
+    width: 100%;
+    max-width: 1500px;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .logo-title,
+footer {
+    color: white;
+}
+
+.info,
+.info a {
+    color: #90A1B9;
+}
+
+.footer-top {
+    width: 100%;
+    display: flex;
+}
+
+footer .part {
+    width: 25%;
+}
+
+.part:not(:first-of-type) {
+    margin-top: 13px;
+}
+
+.part .logo {
+    margin-bottom: 12px;
+}
+
+.part:not(:first-of-type) .part-title {
+    margin-bottom: 25px;
+}
+
+.part:first-of-type .info {
+    padding-right: 10px;
+}
+
+.info {
+    margin-bottom: 10px;
+}
+
+.footer-top {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #90A1B9;
+}
+
+.footer-bottom {
+    color: #90A1B9;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.info a {
+    transition: color .4s ease;
+}
+
+.info:hover a {
+    color: white;
+    transition: color .4s ease;
+}
+
+@media (max-width: 1000px) {
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .part:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+
+    footer .part-title {
+        margin-bottom: 15px;
+    }
+
+    footer .part {
+        width: 100%;
+    }
+
+    .part:not(:first-of-type) .part-title {
+        margin-bottom: 15px;
+    }
+
+    .footer-conatiner {
+        padding-top: 40px;
+    }
+}

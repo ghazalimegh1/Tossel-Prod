@@ -1,0 +1,9 @@
+# Docker ignore patterns for frontend
+.DS_Store
+*.log
+.git
+.gitignore
+README.md
+.vscode
+.idea
+node_modules

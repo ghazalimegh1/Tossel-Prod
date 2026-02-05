@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../../css/home/home.css">
+    <script src="../../js/home/home.js" defer></script>
+    <script src="../../js/nav_footer/include.js" defer></script>
+</head>
+
+<body>
+    <nav></nav>
+
+    <main>
+        <section class="head-section">
+            <div class="little-title">
+                <div>
+                    <svg width="15" height="15" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.9375 6.46094L11.4375 1.96094L6.9375 11.4609L5.9375 7.46094L1.9375 6.46094Z"
+                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div>Smart Transportation Platform</div>
+            </div>
+
+            <div class="main-title">
+                Travel Smarter with <span><span>T</span><span>o</span><span>s</span><span>s</span><span>a</span><span>l</span></span>
+            </div>
+
+            <div class="description">
+                Find the best routes across buses, trains, trams, and taxis. Plan your journey with real-time tracking
+                and smart suggestions.
+            </div>
+
+            <div class="search">
+                <div class="search-container">
+                    <div class="starting">
+                        <div>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.6367 8.76367C17.6367 12.9229 13.0227 17.2545 11.4733 18.5923C11.329 18.7009 11.1533 18.7596 10.9727 18.7596C10.7921 18.7596 10.6164 18.7009 10.472 18.5923C8.92262 17.2545 4.30859 12.9229 4.30859 8.76367C4.30859 6.99625 5.0107 5.30122 6.26045 4.05147C7.51021 2.80171 9.20524 2.09961 10.9727 2.09961C12.7401 2.09961 14.4351 2.80171 15.6849 4.05147C16.9346 5.30122 17.6367 6.99625 17.6367 8.76367Z"
+                                    stroke="#00A63E" stroke-width="1.66602" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10.9727 11.2627C12.3528 11.2627 13.4717 10.1438 13.4717 8.76367C13.4717 7.3835 12.3528 6.26465 10.9727 6.26465C9.59248 6.26465 8.47363 7.3835 8.47363 8.76367C8.47363 10.1438 9.59248 11.2627 10.9727 11.2627Z"
+                                    stroke="#00A63E" stroke-width="1.66602" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="splitted">
+                                <div>S</div>
+                                <div>t</div>
+                                <div>a</div>
+                                <div>r</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>n</div>
+                                <div>g</div>
+                                <div>&nbsp;</div>
+                                <div>p</div>
+                                <div>o</div>
+                                <div>i</div>
+                                <div>n</div>
+                                <div>t</div>
+                            </div>
+                            <input type="text">
+                            <div class="suggestions"></div>
+                        </div>
+                    </div>
+
+                    <div class="destination">
+                        <div>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.6289 8.76367C17.6289 12.9229 13.0149 17.2545 11.4655 18.5923C11.3211 18.7009 11.1454 18.7596 10.9648 18.7596C10.7842 18.7596 10.6085 18.7009 10.4642 18.5923C8.91481 17.2545 4.30078 12.9229 4.30078 8.76367C4.30078 6.99625 5.00289 5.30122 6.25264 4.05147C7.50239 2.80171 9.19742 2.09961 10.9648 2.09961C12.7323 2.09961 14.4273 2.80171 15.677 4.05147C16.9268 5.30122 17.6289 6.99625 17.6289 8.76367Z"
+                                    stroke="#E7000B" stroke-width="1.66602" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10.9648 11.2627C12.345 11.2627 13.4639 10.1438 13.4639 8.76367C13.4639 7.3835 12.345 6.26465 10.9648 6.26465C9.58467 6.26465 8.46582 7.3835 8.46582 8.76367C8.46582 10.1438 9.58467 11.2627 10.9648 11.2627Z"
+                                    stroke="#E7000B" stroke-width="1.66602" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="splitted">
+                                <div>D</div>
+                                <div>e</div>
+                                <div>s</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>n</div>
+                                <div>a</div>
+                                <div>t</div>
+                                <div>i</div>
+                                <div>o</div>
+                                <div>n</div>
+                            </div>
+                            <input type="text">
+                            <div class="suggestions"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="find-button disabled">
+                    <div>
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.1035 14.4081L11.213 11.5176" stroke="white" stroke-width="1.33203"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M7.44336 13.0762C10.386 13.0762 12.7715 10.6907 12.7715 7.74805C12.7715 4.8054 10.386 2.41992 7.44336 2.41992C4.50072 2.41992 2.11523 4.8054 2.11523 7.74805C2.11523 10.6907 4.50072 13.0762 7.44336 13.0762Z"
+                                stroke="white" stroke-width="1.33203" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div>Find Routes</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-section">
+            <div class="grid">
+                <div class="service-container">
+                    <div class="service-logo">
+                        <svg width="50" height="50" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M-0.0078125 16.4062C-0.0078125 7.56969 7.15563 0.40625 15.9922 0.40625H39.9844C48.8209 0.40625 55.9844 7.56969 55.9844 16.4062V40.3984C55.9844 49.235 48.8209 56.3984 39.9844 56.3984H15.9922C7.15563 56.3984 -0.0078125 49.235 -0.0078125 40.3984V16.4062Z"
+                                fill="url(#paint0_linear_13_824)" />
+                            <path d="M17.4824 27.2363L39.6367 16.7422L29.1426 38.8965L26.8105 29.5684L17.4824 27.2363Z"
+                                stroke="white" stroke-width="2.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_13_824" x1="-0.0078125" y1="0.40625" x2="55.9844"
+                                    y2="56.3984" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#2B7FFF" />
+                                    <stop offset="1" stop-color="#155DFC" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="service">
+                        <div class="service-name">Find Route</div>
+                        <div class="service-description">Plan your journey</div>
+                    </div>
+                    <div class="get-started">
+                        <div>Get Started</div>
+                        <div>
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.68945 8.32812H13.0137" stroke="#2563EB" stroke-width="1.33203"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.35156 3.66602L13.0137 8.32812L8.35156 12.9902" stroke="#2563EB"
+                                    stroke-width="1.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-container">
+                    <div class="service-logo">
+                        <svg width="50" height="50" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.664062 16.4062C0.664062 7.56969 7.82751 0.40625 16.6641 0.40625H40.6562C49.4928 0.40625 56.6562 7.56969 56.6562 16.4062V40.3984C56.6562 49.235 49.4928 56.3984 40.6562 56.3984H16.6641C7.82751 56.3984 0.664062 49.235 0.664062 40.3984V16.4062Z"
+                                fill="url(#paint0_linear_13_840)" />
+                            <path
+                                d="M36.8105 38.8965V36.5645C36.8105 35.3275 36.3192 34.1411 35.4445 33.2665C34.5698 32.3918 33.3835 31.9004 32.1465 31.9004H25.1504C23.9134 31.9004 22.7271 32.3918 21.8524 33.2665C20.9777 34.1411 20.4863 35.3275 20.4863 36.5645V38.8965"
+                                stroke="white" stroke-width="2.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M28.6484 27.2363C31.2243 27.2363 33.3125 25.1482 33.3125 22.5723C33.3125 19.9964 31.2243 17.9082 28.6484 17.9082C26.0725 17.9082 23.9844 19.9964 23.9844 22.5723C23.9844 25.1482 26.0725 27.2363 28.6484 27.2363Z"
+                                stroke="white" stroke-width="2.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_13_840" x1="0.664062" y1="0.40625" x2="56.6562"
+                                    y2="56.3984" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00C950" />
+                                    <stop offset="1" stop-color="#00A63E" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="service">
+                        <div class="service-name">Driver Dashboard</div>
+                        <div class="service-description">For drivers only</div>
+                    </div>
+                    <div class="get-started">
+                        <div>Get Started</div>
+                        <div>
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.68945 8.32812H13.0137" stroke="#2563EB" stroke-width="1.33203"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.35156 3.66602L13.0137 8.32812L8.35156 12.9902" stroke="#2563EB"
+                                    stroke-width="1.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="service-container">
+                    <div class="service-logo">
+                        <svg width="50" height="50" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.335938 16.4062C0.335938 7.56969 7.49938 0.40625 16.3359 0.40625H40.3281C49.1647 0.40625 56.3281 7.56969 56.3281 16.4062V40.3984C56.3281 49.235 49.1647 56.3984 40.3281 56.3984H16.3359C7.49938 56.3984 0.335938 49.235 0.335938 40.3984V16.4062Z"
+                                fill="url(#paint0_linear_13_857)" />
+                            <path
+                                d="M36.4824 38.8965V36.5645C36.4824 35.3275 35.991 34.1411 35.1163 33.2665C34.2417 32.3918 33.0553 31.9004 31.8184 31.9004H24.8223C23.5853 31.9004 22.399 32.3918 21.5243 33.2665C20.6496 34.1411 20.1582 35.3275 20.1582 36.5645V38.8965"
+                                stroke="white" stroke-width="2.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M28.3203 27.2363C30.8962 27.2363 32.9844 25.1482 32.9844 22.5723C32.9844 19.9964 30.8962 17.9082 28.3203 17.9082C25.7444 17.9082 23.6562 19.9964 23.6562 22.5723C23.6562 25.1482 25.7444 27.2363 28.3203 27.2363Z"
+                                stroke="white" stroke-width="2.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_13_857" x1="0.335938" y1="0.40625" x2="56.3281"
+                                    y2="56.3984" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#AD46FF" />
+                                    <stop offset="1" stop-color="#9810FA" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="service">
+                        <div class="service-name">My Profile</div>
+                        <div class="service-description">Saved routes & trips</div>
+                    </div>
+                    <div class="get-started">
+                        <div>Get Started</div>
+                        <div>
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.68945 8.32812H13.0137" stroke="#2563EB" stroke-width="1.33203"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.35156 3.66602L13.0137 8.32812L8.35156 12.9902" stroke="#2563EB"
+                                    stroke-width="1.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="service-container">
+                    <div class="service-logo">
+                        <svg width="50" height="50" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M-0.0078125 16.3672C-0.0078125 7.53063 7.15563 0.367188 15.9922 0.367188H39.9844C48.8209 0.367188 55.9844 7.53063 55.9844 16.3672V40.3594C55.9844 49.1959 48.8209 56.3594 39.9844 56.3594H15.9922C7.15563 56.3594 -0.0078125 49.1959 -0.0078125 40.3594V16.3672Z"
+                                fill="url(#paint0_linear_13_874)" />
+                            <path
+                                d="M39.6367 34.1934C39.6367 34.8119 39.391 35.405 38.9537 35.8424C38.5163 36.2797 37.9232 36.5254 37.3047 36.5254H21.9459C21.3275 36.5255 20.7344 36.7713 20.2972 37.2087L17.7296 39.7762C17.6138 39.892 17.4663 39.9708 17.3058 40.0028C17.1452 40.0347 16.9787 40.0183 16.8275 39.9557C16.6762 39.893 16.5469 39.7869 16.456 39.6508C16.365 39.5147 16.3164 39.3546 16.3164 39.1909V20.2012C16.3164 19.5827 16.5621 18.9895 16.9994 18.5522C17.4368 18.1148 18.0299 17.8691 18.6484 17.8691H37.3047C37.9232 17.8691 38.5163 18.1148 38.9537 18.5522C39.391 18.9895 39.6367 19.5827 39.6367 20.2012V34.1934Z"
+                                stroke="white" stroke-width="2.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_13_874" x1="-0.0078125" y1="0.367188" x2="55.9844"
+                                    y2="56.3594" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00B8DB" />
+                                    <stop offset="1" stop-color="#0092B8" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="service">
+                        <div class="service-name">Contact Us</div>
+                        <div class="service-description">Get help & support</div>
+                    </div>
+                    <div class="get-started">
+                        <div>Get Started</div>
+                        <div>
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.68945 8.32812H13.0137" stroke="#2563EB" stroke-width="1.33203"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.35156 3.66602L13.0137 8.32812L8.35156 12.9902" stroke="#2563EB"
+                                    stroke-width="1.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-container">
+                    <div class="service-logo">
+                        <svg width="50" height="50" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.664062 16.3672C0.664062 7.53063 7.82751 0.367188 16.6641 0.367188H40.6562C49.4928 0.367188 56.6562 7.53063 56.6562 16.3672V40.3594C56.6562 49.1959 49.4928 56.3594 40.6562 56.3594H16.6641C7.82751 56.3594 0.664062 49.1959 0.664062 40.3594V16.3672Z"
+                                fill="url(#paint0_linear_13_890)" />
+                            <path
+                                d="M32.1465 16.7031H21.6523C21.0339 16.7031 20.4407 16.9488 20.0033 17.3862C19.566 17.8235 19.3203 18.4167 19.3203 19.0352V37.6914C19.3203 38.3099 19.566 38.9031 20.0033 39.3404C20.4407 39.7777 21.0339 40.0234 21.6523 40.0234H35.6445C36.263 40.0234 36.8562 39.7777 37.2935 39.3404C37.7309 38.9031 37.9766 38.3099 37.9766 37.6914V22.5332L32.1465 16.7031Z"
+                                stroke="white" stroke-width="2.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M30.9805 16.7031V21.3672C30.9805 21.9857 31.2262 22.5788 31.6635 23.0162C32.1008 23.4535 32.694 23.6992 33.3125 23.6992H37.9766"
+                                stroke="white" stroke-width="2.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M26.3164 24.8652H23.9844" stroke="white" stroke-width="2.33203"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M33.3125 29.5293H23.9844" stroke="white" stroke-width="2.33203"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M33.3125 34.1934H23.9844" stroke="white" stroke-width="2.33203"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_13_890" x1="0.664062" y1="0.367188" x2="56.6562"
+                                    y2="56.3594" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FE9A00" />
+                                    <stop offset="1" stop-color="#E17100" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="service">
+                        <div class="service-name">Complaints</div>
+                        <div class="service-description">Report issues</div>
+                    </div>
+                    <div class="get-started">
+                        <div>Get Started</div>
+                        <div>
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.68945 8.32812H13.0137" stroke="#2563EB" stroke-width="1.33203"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.35156 3.66602L13.0137 8.32812L8.35156 12.9902" stroke="#2563EB"
+                                    stroke-width="1.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-container">
+                    <div class="service-logo">
+                        <svg width="50" height="50" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.335938 16.3672C0.335938 7.53063 7.49938 0.367188 16.3359 0.367188H40.3281C49.1647 0.367188 56.3281 7.53063 56.3281 16.3672V40.3594C56.3281 49.1959 49.1647 56.3594 40.3281 56.3594H16.3359C7.49938 56.3594 0.335938 49.1959 0.335938 40.3594V16.3672Z"
+                                fill="url(#paint0_linear_13_910)" />
+                            <path
+                                d="M31.8184 16.7031H21.3242C20.7057 16.7031 20.1126 16.9488 19.6752 17.3862C19.2379 17.8235 18.9922 18.4167 18.9922 19.0352V37.6914C18.9922 38.3099 19.2379 38.9031 19.6752 39.3404C20.1126 39.7777 20.7057 40.0234 21.3242 40.0234H35.3164C35.9349 40.0234 36.5281 39.7777 36.9654 39.3404C37.4027 38.9031 37.6484 38.3099 37.6484 37.6914V22.5332L31.8184 16.7031Z"
+                                stroke="white" stroke-width="2.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M30.6523 16.7031V21.3672C30.6523 21.9857 30.898 22.5788 31.3354 23.0162C31.7727 23.4535 32.3659 23.6992 32.9844 23.6992H37.6484"
+                                stroke="white" stroke-width="2.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M25.9883 24.8652H23.6562" stroke="white" stroke-width="2.33203"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M32.9844 29.5293H23.6562" stroke="white" stroke-width="2.33203"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M32.9844 34.1934H23.6562" stroke="white" stroke-width="2.33203"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_13_910" x1="0.335938" y1="0.367188" x2="56.3281"
+                                    y2="56.3594" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#F6339A" />
+                                    <stop offset="1" stop-color="#E60076" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="service">
+                        <div class="service-name">About Tossal</div>
+                        <div class="service-description">Learn more & FAQs</div>
+                    </div>
+                    <div class="get-started">
+                        <div>Get Started</div>
+                        <div>
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.68945 8.32812H13.0137" stroke="#2563EB" stroke-width="1.33203"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.35156 3.66602L13.0137 8.32812L8.35156 12.9902" stroke="#2563EB"
+                                    stroke-width="1.33203" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="transport-options">
+            <div class="c-little-title little-title">All Transport Options</div>
+            <div class="c-main-title main-title t">Travel Your Way</div>
+            <div class="c-description description">Choose from multiple transport modes or combine them for the perfect
+                journey</div>
+            <div class="options-grid">
+                <div class="t-option">
+                    <div class="option-logo">
+                        <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.984375 32.1953C0.984375 14.5265 15.3078 0.203125 32.9766 0.203125C50.6454 0.203125 64.9688 14.5265 64.9688 32.1953C64.9688 49.8641 50.6454 64.1875 32.9766 64.1875C15.3078 64.1875 0.984375 49.8641 0.984375 32.1953Z"
+                                fill="#DBEAFE" />
+                            <path d="M27.6328 24.1973V32.1953" stroke="#155DFC" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M36.9639 24.1973V32.1953" stroke="#155DFC" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M19.6348 32.1953H45.7617" stroke="#155DFC" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M40.9629 40.1934H44.9619C44.9619 40.1934 45.6284 37.9272 46.0283 36.4609C46.1616 35.9277 46.2949 35.3945 46.2949 34.8613C46.2949 34.3281 46.1616 33.7949 46.0283 33.2617L44.1621 26.5967C43.7622 25.2637 42.4292 24.1973 40.9629 24.1973H22.3008C21.5937 24.1973 20.9156 24.4781 20.4156 24.9781C19.9156 25.4781 19.6348 26.1562 19.6348 26.8633V40.1934H23.6338"
+                                stroke="#155DFC" stroke-width="2.66602" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M26.2998 42.8594C27.7722 42.8594 28.9658 41.6658 28.9658 40.1934C28.9658 38.721 27.7722 37.5273 26.2998 37.5273C24.8274 37.5273 23.6338 38.721 23.6338 40.1934C23.6338 41.6658 24.8274 42.8594 26.2998 42.8594Z"
+                                stroke="#155DFC" stroke-width="2.66602" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M28.9658 40.1934H35.6309" stroke="#155DFC" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M38.2969 42.8594C39.7693 42.8594 40.9629 41.6658 40.9629 40.1934C40.9629 38.721 39.7693 37.5273 38.2969 37.5273C36.8245 37.5273 35.6309 38.721 35.6309 40.1934C35.6309 41.6658 36.8245 42.8594 38.2969 42.8594Z"
+                                stroke="#155DFC" stroke-width="2.66602" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="option-name">Bus</div>
+                </div>
+                <div class="t-option">
+                    <div class="option-logo">
+                        <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.976562 32.1953C0.976562 14.5265 15.3 0.203125 32.9688 0.203125C50.6375 0.203125 64.9609 14.5265 64.9609 32.1953C64.9609 49.8641 50.6375 64.1875 32.9688 64.1875C15.3 64.1875 0.976562 49.8641 0.976562 32.1953Z"
+                                fill="#DCFCE7" />
+                            <path
+                                d="M40.9551 20.1982H24.959C23.4866 20.1982 22.293 21.3919 22.293 22.8643V38.8604C22.293 40.3328 23.4866 41.5264 24.959 41.5264H40.9551C42.4275 41.5264 43.6211 40.3328 43.6211 38.8604V22.8643C43.6211 21.3919 42.4275 20.1982 40.9551 20.1982Z"
+                                stroke="#00A63E" stroke-width="2.66602" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M22.293 30.8623H43.6211" stroke="#00A63E" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M32.957 20.1982V30.8623" stroke="#00A63E" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M27.625 41.5264L24.959 45.5254" stroke="#00A63E" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M40.9551 45.5254L38.2891 41.5264" stroke="#00A63E" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M27.625 36.1943H27.6383" stroke="#00A63E" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M38.2891 36.1943H38.3024" stroke="#00A63E" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="option-name">Train</div>
+                </div>
+                <div class="t-option">
+                    <div class="option-logo">
+                        <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.96875 32.1953C0.96875 14.5265 15.2921 0.203125 32.9609 0.203125C50.6297 0.203125 64.9531 14.5265 64.9531 32.1953C64.9531 49.8641 50.6297 64.1875 32.9609 64.1875C15.2921 64.1875 0.96875 49.8641 0.96875 32.1953Z"
+                                fill="#CEFAFE" />
+                            <path
+                                d="M40.9473 20.1982H24.9512C23.4788 20.1982 22.2852 21.3919 22.2852 22.8643V38.8604C22.2852 40.3328 23.4788 41.5264 24.9512 41.5264H40.9473C42.4197 41.5264 43.6133 40.3328 43.6133 38.8604V22.8643C43.6133 21.3919 42.4197 20.1982 40.9473 20.1982Z"
+                                stroke="#0092B8" stroke-width="2.66602" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M22.2852 30.8623H43.6133" stroke="#0092B8" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M32.9492 20.1982V30.8623" stroke="#0092B8" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M27.6172 41.5264L24.9512 45.5254" stroke="#0092B8" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M40.9473 45.5254L38.2812 41.5264" stroke="#0092B8" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M27.6172 36.1943H27.6305" stroke="#0092B8" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M38.2812 36.1943H38.2946" stroke="#0092B8" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="option-name">Tram</div>
+                </div>
+                <div class="t-option">
+                    <div class="option-logo">
+                        <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.984375 32.1953C0.984375 14.5265 15.3078 0.203125 32.9766 0.203125C50.6454 0.203125 64.9688 14.5265 64.9688 32.1953C64.9688 49.8641 50.6454 64.1875 32.9766 64.1875C15.3078 64.1875 0.984375 49.8641 0.984375 32.1953Z"
+                                fill="#F3E8FF" />
+                            <path
+                                d="M42.2959 38.8604H44.9619C45.7617 38.8604 46.2949 38.3271 46.2949 37.5273V33.5283C46.2949 32.3286 45.3618 31.2622 44.2954 30.9956C41.896 30.3291 38.2969 29.5293 38.2969 29.5293C38.2969 29.5293 36.564 27.6631 35.3643 26.4634C34.6978 25.9302 33.8979 25.5303 32.9648 25.5303H23.6338C22.834 25.5303 22.1675 26.0635 21.7676 26.73L19.9014 30.5957C19.7249 31.1105 19.6348 31.6511 19.6348 32.1953V37.5273C19.6348 38.3271 20.168 38.8604 20.9678 38.8604H23.6338"
+                                stroke="#9810FA" stroke-width="2.66602" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M26.2998 41.5264C27.7722 41.5264 28.9658 40.3328 28.9658 38.8604C28.9658 37.388 27.7722 36.1943 26.2998 36.1943C24.8274 36.1943 23.6338 37.388 23.6338 38.8604C23.6338 40.3328 24.8274 41.5264 26.2998 41.5264Z"
+                                stroke="#9810FA" stroke-width="2.66602" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M28.9658 38.8604H36.9639" stroke="#9810FA" stroke-width="2.66602"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M39.6299 41.5264C41.1023 41.5264 42.2959 40.3328 42.2959 38.8604C42.2959 37.388 41.1023 36.1943 39.6299 36.1943C38.1575 36.1943 36.9639 37.388 36.9639 38.8604C36.9639 40.3328 38.1575 41.5264 39.6299 41.5264Z"
+                                stroke="#9810FA" stroke-width="2.66602" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="option-name">Taxi</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-tossal">
+            <div class="c-little-title little-title">Why Choose Tossal?</div>
+            <div class="c-main-title main-title t">Smart Features for Smart Travel</div>
+            <div class="c-description description">Experience the future of urban transportation with our intelligent
+                platform</div>
+            <div class="why-grid">
+                <div class="reason">
+                    <div class="reason-logo">
+                        <svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M-0.0078125 28.0352C-0.0078125 12.5733 12.5265 0.0390625 27.9883 0.0390625C43.4501 0.0390625 55.9844 12.5733 55.9844 28.0352C55.9844 43.497 43.4501 56.0312 27.9883 56.0312C12.5265 56.0312 -0.0078125 43.497 -0.0078125 28.0352Z"
+                                fill="url(#paint0_linear_13_735)" />
+                            <path
+                                d="M18.6484 30.3673C18.4277 30.368 18.2114 30.3062 18.0245 30.1889C17.8376 30.0716 17.6879 29.9036 17.5926 29.7046C17.4974 29.5056 17.4606 29.2836 17.4865 29.0645C17.5123 28.8453 17.5999 28.638 17.7389 28.4667L29.2824 16.5733C29.369 16.4734 29.487 16.4058 29.6171 16.3818C29.7471 16.3577 29.8815 16.3786 29.9981 16.441C30.1147 16.5034 30.2066 16.6035 30.2588 16.725C30.311 16.8465 30.3203 16.9822 30.2852 17.1097L28.0465 24.1291C27.9805 24.3058 27.9583 24.4958 27.9819 24.683C28.0054 24.8701 28.0741 25.0487 28.1818 25.2035C28.2896 25.3583 28.4333 25.4846 28.6007 25.5717C28.768 25.6587 28.9539 25.7038 29.1425 25.7032H37.3046C37.5253 25.7025 37.7416 25.7644 37.9285 25.8817C38.1154 25.999 38.2652 26.1669 38.3604 26.3659C38.4557 26.565 38.4925 26.7869 38.4666 27.0061C38.4407 27.2252 38.3531 27.4325 38.2141 27.6038L26.6706 39.4972C26.584 39.5971 26.466 39.6647 26.3359 39.6887C26.2059 39.7128 26.0716 39.6919 25.955 39.6295C25.8383 39.5672 25.7464 39.467 25.6942 39.3455C25.642 39.224 25.6327 39.0883 25.6678 38.9608L27.9065 31.9414C27.9726 31.7647 27.9947 31.5747 27.9712 31.3876C27.9476 31.2004 27.879 31.0218 27.7712 30.867C27.6634 30.7122 27.5197 30.5859 27.3524 30.4989C27.185 30.4118 26.9991 30.3667 26.8105 30.3673H18.6484Z"
+                                stroke="#155DFC" stroke-width="2.33203" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_13_735" x1="-0.0078125" y1="0.0390625" x2="55.9844"
+                                    y2="56.0312" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#DBEAFE" />
+                                    <stop offset="1" stop-color="#CEFAFE" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="reason-name">Fast Routes</div>
+                    <div class="reason-description">Get the quickest path to your destination</div>
+                </div>
+                <div class="reason">
+                    <div class="reason-logo">
+                        <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.984375 28.0352C0.984375 12.5733 13.5187 0.0390625 28.9805 0.0390625C44.4423 0.0390625 56.9766 12.5733 56.9766 28.0352C56.9766 43.497 44.4423 56.0312 28.9805 56.0312C13.5187 56.0312 0.984375 43.497 0.984375 28.0352Z"
+                                fill="url(#paint0_linear_13_743)" />
+                            <path d="M28.9688 16.375V39.6953" stroke="#155DFC" stroke-width="2.33203"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M34.7988 19.873H26.0537C24.9713 19.873 23.9333 20.303 23.168 21.0684C22.4026 21.8337 21.9727 22.8717 21.9727 23.9541C21.9727 25.0365 22.4026 26.0745 23.168 26.8398C23.9333 27.6052 24.9713 28.0352 26.0537 28.0352H31.8838C32.9662 28.0352 34.0042 28.4651 34.7695 29.2305C35.5349 29.9958 35.9648 31.0338 35.9648 32.1162C35.9648 33.1986 35.5349 34.2366 34.7695 35.002C34.0042 35.7673 32.9662 36.1973 31.8838 36.1973H21.9727"
+                                stroke="#155DFC" stroke-width="2.33203" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_13_743" x1="0.984375" y1="0.0390625" x2="56.9766"
+                                    y2="56.0312" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#DBEAFE" />
+                                    <stop offset="1" stop-color="#CEFAFE" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="reason-name">Cost Effective</div>
+                    <div class="reason-description">Compare prices and save money</div>
+                </div>
+                <div class="reason">
+                    <div class="reason-logo">
+                        <svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 28.0352C0 12.5733 12.5343 0.0390625 27.9961 0.0390625C43.4579 0.0390625 55.9922 12.5733 55.9922 28.0352C55.9922 43.497 43.4579 56.0312 27.9961 56.0312C12.5343 56.0312 0 43.497 0 28.0352Z"
+                                fill="url(#paint0_linear_13_752)" />
+                            <path
+                                d="M26.8183 37.3633C24.7709 37.3695 22.7959 36.606 21.285 35.2241C19.7742 33.8423 18.8378 31.9431 18.6617 29.9032C18.4856 27.8634 19.0826 25.8318 20.3343 24.2115C21.586 22.5912 23.4009 21.5005 25.4191 21.1557C32.0654 19.873 33.8144 19.2667 36.1464 16.375C37.3125 18.707 38.4785 21.2489 38.4785 25.7031C38.4785 32.1162 32.9049 37.3633 26.8183 37.3633Z"
+                                stroke="#155DFC" stroke-width="2.33203" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M16.3242 38.5293C16.3242 35.0312 18.4813 32.2795 22.2476 31.5332C25.0693 30.9735 27.9844 29.2012 29.1504 28.0352"
+                                stroke="#155DFC" stroke-width="2.33203" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_13_752" x1="0" y1="0.0390625" x2="55.9922"
+                                    y2="56.0312" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#DBEAFE" />
+                                    <stop offset="1" stop-color="#CEFAFE" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="reason-name">Eco-Friendly</div>
+                    <div class="reason-description">Choose greener travel options</div>
+                </div>
+                <div class="reason">
+                    <div class="reason-logo">
+                        <svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M-0.0078125 28.0352C-0.0078125 12.5733 12.5265 0.0390625 27.9883 0.0390625C43.4501 0.0390625 55.9844 12.5733 55.9844 28.0352C55.9844 43.497 43.4501 56.0312 27.9883 56.0312C12.5265 56.0312 -0.0078125 43.497 -0.0078125 28.0352Z"
+                                fill="url(#paint0_linear_13_761)" />
+                            <path d="M27.9766 21.0391V28.0352L32.6406 30.3672" stroke="#155DFC" stroke-width="2.33203"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M27.9766 39.6953C34.4163 39.6953 39.6367 34.4749 39.6367 28.0352C39.6367 21.5954 34.4163 16.375 27.9766 16.375C21.5368 16.375 16.3164 21.5954 16.3164 28.0352C16.3164 34.4749 21.5368 39.6953 27.9766 39.6953Z"
+                                stroke="#155DFC" stroke-width="2.33203" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="paint0_linear_13_761" x1="-0.0078125" y1="0.0390625" x2="55.9844"
+                                    y2="56.0312" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#DBEAFE" />
+                                    <stop offset="1" stop-color="#CEFAFE" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="reason-name">Real-Time</div>
+                    <div class="reason-description">Live tracking and updates</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ready-to-start head-section">
+            <div class="t main-title">Ready to Start Your Journey?</div>
+            <div class="d description">Join thousands of smart travelers using Tossal every day</div>
+            <div class="buttons-container">
+                <div class="button">
+                    <div class="button-d">Find a Route</div>
+                    <div><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.51758 8.9375H12.8418" stroke="#155DFC" stroke-width="1.33203"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.17969 4.27539L12.8418 8.9375L8.17969 13.5996" stroke="#155DFC"
+                                stroke-width="1.33203" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="button">
+                    <div class="button-d">Create Account</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sign up tossel</title>
+      <link rel="stylesheet" href="../../css/signup_page/signup.css">
+   </head>
+   <body>
+      <div class="main_container">
+         <div class="main_header">
+            <div class="main_title">
+               <div id="iconTitle"></div>
+               <h1 class="title">Tossal</h1>
+            </div>
+            <h2 class="welcome_msg">Create your account to get started</h2>
+         </div>
+         <div class="main_forum">
+            <div class="credential_container">
+               <h1 class="welcome_msg"></h1>
+               <p class="welcome_msg">Enter your credential to access your account</p>
+               <form class="mother_container">
+                  <div class="full_name_container input_container">
+                     <label class="input_label">Full name</label>
+                     <div class="sub_full_name_container">
+                        <div id="iconFullName"></div>
+                        <input 
+                           id="full_name_input"
+                           class="input_box" 
+                           type="text" 
+                           placeholder="Mohammed Salah" 
+                           required maxlength="100">
+                     </div>
+                  </div>
+                  <div class="email_container input_container">
+                     <label class="input_label">Email</label>
+                     <div class="sub_email_container">
+                        <div id="iconEmail"></div>
+                        <input 
+                           id="email_input_data"
+                           class="input_box" 
+                           type="text" 
+                           placeholder="Mohammed@gmail.com" 
+                           required maxlength="100">
+                     </div>
+                  </div>
+                  <div class="phone_number_container input_container">
+                     <label class="input_label">Phone number</label>
+                     <div class="sub_phone_number_container">
+                        <div id="iconPhone"></div>
+                        <input 
+                           id="phone_input_data"
+                           class="input_box" 
+                           type="text" 
+                           placeholder="+1 (555) 000-0000" 
+                           required maxlength="100">
+                     </div>
+                  </div>
+                  <div class="password_container input_container">
+                     <label class="input_label">Password</label>
+                     <div class="sub_password_container">
+                        <div id="iconPassword"></div>
+                        <input 
+                           id="password_input_data"
+                           class="input_box" 
+                           type="password" 
+                           required maxlength="100" 
+                           placeholder="••••••">
+                        <button 
+                           type="button"
+                           class="toggle-password"
+                           id="togglePassword"
+                           aria-label="Show password"
+                           aria-pressed="false"
+                           title="Show password">
+                           <div id="iconTogglePassword"></div>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="password_confirm_container input_container">
+                     <label class="input_label">Confirm Password</label>
+                     <div class="sub_password_container_confirm">
+                        <div id="iconPasswordConfirm"></div>
+                        <input 
+                           id="confirm_password_input"
+                           class="input_box" 
+                           type="password" 
+                           required maxlength="100" 
+                           placeholder="••••••">
+                     </div>
+                  </div>
+                  <div class="options_container">
+                     <div class="terms_option">
+                        <input type="checkbox" id="terms_checkbox" required>
+                        <label>I agree to the <a href="">terms & conditions</a></label>
+                     </div>
+                  </div>
+                  <button class="signin_button" type="submit">Sign up</button>
+               </form>
+               <div class="seperator"></div>
+            </div>
+            <div class="refer_signup welcome_msg">
+               <p>Already have an account ? <a href="../login/login.html">Login</a></p>
+            </div>
+         </div>
+      </div>
+      <script src="../../js/sign_up/sign_up.js"></script>
+   </body>
+</html>

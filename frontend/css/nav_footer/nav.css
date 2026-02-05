@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arimo", sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    padding: 13px 20px 8px;
+    backdrop-filter: "backdrop-blur-lg";
+    background-color: rgba(255,255,255,.8);
+    border-bottom: 1px solid #FAFBFC;
+    position: sticky;
+    z-index: 999999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+}
+
+nav + * {
+    padding-top: 70px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1300px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.logo-title {
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #0F172A;
+}
+
+.options-left,
+.options-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options-left {
+    width: 500px;
+}
+
+.options-right {
+    width: 300px;
+}
+
+.logged {
+    width: 250px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: background-color .4s ease;
+    height: 35px;
+}
+
+.option>div:first-of-type {
+    margin-right: 5px;
+}
+
+.option.active,
+.profile {
+    background-color: #2563EB;
+}
+
+.option.active:hover,
+.profile:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+
+.option.active {
+    transition: color .1s ease;
+}
+
+.option.active *,
+.profile * {
+    color: white;
+    stroke: white;
+}
+
+.option:not(.active, .profile):hover {
+    background-color: #06b6d4;
+    transition: background-color .4s ease;
+    cursor: pointer;
+}
+
+.option:not(.active, .profile):hover>a,
+.option:not(.active, .profile):hover>div>a {
+    color: white;
+}
+
+.option:hover>div>svg>path,
+.option:hover>div>svg>g>path {
+    stroke: white;
+}
+
+.login {
+    background-color: #FAFBFC;
+    border: 2px solid #E2E8F0;
+}
+
+.menu-button {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .4s ease;
+    display: none;
+}
+
+.menu-button:hover {
+    background-color: #06b6d4;
+    cursor: pointer;
+    transition: background-color .4s ease;
+}
+
+.menu-button:hover>svg>path {
+    stroke: white;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-top: 2px solid #E2E8F0;
+    padding: 20px;
+    display: none;
+    background-color: white;
+    position: fixed;
+    margin-top: 55px;
+}
+
+.options-container .options-left,
+.options-container .options-right {
+    flex-direction: column;
+    width: 100%;
+}
+
+.options-container .option {
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.options-container .options-right .login,
+.options-container .options-right,
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options-container .options-left {
+    border-bottom: 2px solid #E2E8F0;
+    padding-bottom: 5px;
+}
+
+.options-container .options-right {
+    padding-top: 7px;
+}
+
+@media (max-width: 1000px) {
+
+    .nav-container .options-left,
+    .nav-container .options-right {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+    
+}
+
+.confirm-button-disabled {
+    background-color: #00A63E !important;
+    color: white;
+    pointer-events: none;
+}
+
+.confirm-button-disabled:hover {
+    cursor: not-allowed;
+}

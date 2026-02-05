@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/complaint_page/complaint.css">
+    <script src="../../js/nav_footer/include.js" defer></script>
+</head>
+
+<body>
+    <nav></nav>
+    <main>
+    <div class="complaint-header">
+        <div class="report-issue">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.4867 12L9.15332 2.66667C9.03703 2.46147 8.86839 2.29079 8.6646 2.17205C8.46081 2.0533 8.22918 1.99074 7.99332 1.99074C7.75746 1.99074 7.52582 2.0533 7.32203 2.17205C7.11825 2.29079 6.94961 2.46147 6.83332 2.66667L1.49998 12C1.38244 12.2036 1.3208 12.4346 1.32132 12.6697C1.32184 12.9047 1.3845 13.1355 1.50295 13.3386C1.62139 13.5416 1.79142 13.7097 1.99578 13.8259C2.20015 13.9421 2.43159 14.0021 2.66665 14H13.3333C13.5673 13.9998 13.797 13.938 13.9995 13.8209C14.202 13.7037 14.3701 13.5354 14.487 13.3327C14.6039 13.1301 14.6653 12.9003 14.6653 12.6663C14.6652 12.4324 14.6036 12.2026 14.4867 12Z"
+                    stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8 6V8.66667" stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M8 11.3333H8.00667" stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <p>Report an issue</p>
+        </div>
+        <h1>Complaints & Feedback</h1>
+        <p>Report any issues and track their resolution</p>
+    </div>
+    
+    <div class="complaints-container">
+        <div class="making-complaint">
+            <div class="your-complaints" id="your-complaints">
+                <h5>Your Complaints</h5>
+                <p class="track-complaint">Track your submitted issues</p>
+            </div>
+            <div class="submit-complaint">
+                <h5>Submit a Complaint</h5>
+                <p class="track-complaint">Tell us about your experience. We'll investigate and respond within 48 hours
+                </p>
+                <form action="">
+                    <div class="single-input">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" name="fullname" id="fullname" placeholder="Your name">
+                    </div>
+                    <div class="single-input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="your@gmail.com">
+                    </div>
+                    <div class="single-input">
+                        <label for="phone">Phone (Optional)</label>
+                        <input type="text" name="phone" id="phone" placeholder="+213 5 42 24 73 34">
+                    </div>
+
+                    <div class="single-input">
+                        <label for="">Complaint Type</label>
+                        <div class="select-complaint-type" id="select-complaint-type">
+                            <p id="select-placeholder">Select Complaint Type</p>
+                            <div class="complaint-types" id="complaint-types">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="single-input">
+                        <label for="route">Route/Line Number (if applicable)</label>
+                        <input type="text" name="route" id="route" placeholder="e.g., Bus 42, Line 51">
+                    </div>
+                    <!-- <div class="single-input">
+                        <label for="datetime">Date & Time</label>
+                        <input type="datetime" name="datetime" id="datetime">
+                    </div> -->
+                    <div class="single-input">
+                        <label for="description">Detailed Description</label>
+                        <textarea name="description" id="description"
+                            placeholder="Please provide as much detail as possible about the issue..." >
+                        </textarea>
+                    </div>
+                    <button type="submit"><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_1159)">
+                                <path
+                                    d="M9.88858 15.1241C9.9139 15.1872 9.95793 15.2411 10.0148 15.2784C10.0716 15.3158 10.1385 15.3349 10.2065 15.3332C10.2745 15.3314 10.3403 15.3089 10.3951 15.2687C10.45 15.2285 10.4912 15.1724 10.5132 15.1081L14.8466 2.44141C14.8679 2.38234 14.872 2.31841 14.8583 2.25711C14.8446 2.19581 14.8138 2.13967 14.7694 2.09526C14.725 2.05085 14.6688 2.02001 14.6075 2.00634C14.5462 1.99267 14.4823 1.99674 14.4232 2.01808L1.75658 6.35141C1.69224 6.37347 1.63619 6.41469 1.59596 6.46953C1.55572 6.52436 1.53322 6.59019 1.53148 6.65818C1.52974 6.72618 1.54884 6.79307 1.58621 6.8499C1.62359 6.90672 1.67745 6.95075 1.74058 6.97608L7.02724 9.09608C7.19437 9.16299 7.34621 9.26305 7.47362 9.39023C7.60103 9.51741 7.70136 9.66907 7.76858 9.83608L9.88858 15.1241Z"
+                                    stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M14.7673 2.09802L7.47394 9.39069" stroke="white" stroke-width="1.33333"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_1159">
+                                    <rect width="16" height="16" fill="white"
+                                        transform="translate(0.197937 0.666748)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Submit Complaint
+                    </button>
+
+                </form>
+                <p style="color: #64748B; font-size: 12px;width: 100% ;text-align: center;">You'll receive a tracking
+                    number via email to follow up on your complaint</p>
+            </div>
+        </div>
+        <div class="complaint-resolution-process-container">
+            <div class="complaint-resolution-process">
+                <h5><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.5 2.33325H5C4.55797 2.33325 4.13405 2.50885 3.82149 2.82141C3.50893 3.13397 3.33333 3.55789 3.33333 3.99992V17.3333C3.33333 17.7753 3.50893 18.1992 3.82149 18.5118C4.13405 18.8243 4.55797 18.9999 5 18.9999H15C15.442 18.9999 15.8659 18.8243 16.1785 18.5118C16.4911 18.1992 16.6667 17.7753 16.6667 17.3333V6.49992L12.5 2.33325Z"
+                            stroke="#155DFC" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M11.6667 2.33325V5.66659C11.6667 6.10861 11.8423 6.53254 12.1548 6.8451C12.4674 7.15766 12.8913 7.33325 13.3333 7.33325H16.6667"
+                            stroke="#155DFC" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8.33333 8.16663H6.66667" stroke="#155DFC" stroke-width="1.66667"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M13.3333 11.5H6.66667" stroke="#155DFC" stroke-width="1.66667" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M13.3333 14.8333H6.66667" stroke="#155DFC" stroke-width="1.66667"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Complaint Resolution Process</h5>
+                <div class="process">
+                    <div class="process-number">1</div>
+                    <div class="process-title-desc">
+                        <h6>Submission</h6>
+                        <p class="process-description">Your complaint is logged and you receive a tracking number</p>
+                    </div>
+                </div>
+                <div class="process">
+                    <div class="process-number">2</div>
+                    <div class="process-title-desc">
+                        <h6>Review</h6>
+                        <p class="process-description">Our team investigates the issue within 24 hours</p>
+                    </div>
+                </div>
+                <div class="process">
+                    <div class="process-number">3</div>
+                    <div class="process-title-desc">
+                        <h6>Resolution</h6>
+                        <p class="process-description">We take action and inform you of the outcome within 48 hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </main>
+        <footer></footer>
+    <script src="../../js/complaint_page/complaint.js"></script>
+</body>
+
+</html>
+
+
+
+

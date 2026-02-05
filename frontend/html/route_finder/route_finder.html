@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Route Finder - Tossal</title>
+  <link rel="stylesheet" href="../../css/route_finder/routefinder.css">
+  <script src="../../js/route_finder/routefinder.js"></script>
+  <script src="../../js/nav_footer/include.js" defer></script>
+
+</head>
+
+<body>
+  <nav></nav>
+  <main>
+    <section class="head-section">
+      <div class="little-title">
+        <div>
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_132_11)">
+              <path d="M8.91252 1.53369L13.5792 14.2004L8.91252 11.5337L4.24585 14.2004L8.91252 1.53369Z" stroke="white"
+                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_132_11">
+                <rect width="16" height="16" fill="white" transform="translate(0.912598 0.200195)" />
+              </clipPath>
+            </defs>
+          </svg>
+
+        </div>
+        <div>Smart Route Planning</div>
+      </div>
+
+      <div class="main-title">
+        Find Your Perfect Route
+      </div>
+
+      <div class="description">
+        Enter your journey details and discover the best way to travel.
+      </div>
+    </section>
+    <div class="content">
+
+      <div class="filling_info_about_route">
+        <div>
+          <h2 id="form_title">Plan your journey</h2>
+          <p id="info_intro">Tell us where you're going and we'll find the best routes</p>
+        </div>
+        <form id="the_info">
+          <div class="labinpu">
+            <label for="starting_point" class="labels">Starting Point</label>
+
+            <div class="inputs">
+              <div class="svgs"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.6666 8.66673C16.6666 12.8276 12.0508 17.1609 10.5008 18.4992C10.3564 18.6078 10.1806 18.6665 9.99992 18.6665C9.81925 18.6665 9.64348 18.6078 9.49909 18.4992C7.94909 17.1609 3.33325 12.8276 3.33325 8.66673C3.33325 6.89862 4.03563 5.20292 5.28587 3.95268C6.53612 2.70244 8.23181 2.00006 9.99992 2.00006C11.768 2.00006 13.4637 2.70244 14.714 3.95268C15.9642 5.20292 16.6666 6.89862 16.6666 8.66673Z"
+                    stroke="#00A63E" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M10 11.1667C11.3807 11.1667 12.5 10.0474 12.5 8.66669C12.5 7.28598 11.3807 6.16669 10 6.16669C8.61929 6.16669 7.5 7.28598 7.5 8.66669C7.5 10.0474 8.61929 11.1667 10 11.1667Z"
+                    stroke="#00A63E" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></div>
+              <input type="text" name="starting_point" id="starting_point" required
+                placeholder="Enter your starting location">
+            </div>
+
+          </div>
+
+          <div class="labinpu">
+
+            <label for="destination" class="labels">Destination</label>
+
+            <div class="inputs">
+              <div class="svgs"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.6666 8.66673C16.6666 12.8276 12.0508 17.1609 10.5008 18.4992C10.3564 18.6078 10.1806 18.6665 9.99992 18.6665C9.81925 18.6665 9.64348 18.6078 9.49909 18.4992C7.94909 17.1609 3.33325 12.8276 3.33325 8.66673C3.33325 6.89862 4.03563 5.20292 5.28587 3.95268C6.53612 2.70244 8.23181 2.00006 9.99992 2.00006C11.768 2.00006 13.4637 2.70244 14.714 3.95268C15.9642 5.20292 16.6666 6.89862 16.6666 8.66673Z"
+                    stroke="#E7000B" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M10 11.1667C11.3807 11.1667 12.5 10.0474 12.5 8.66669C12.5 7.28598 11.3807 6.16669 10 6.16669C8.61929 6.16669 7.5 7.28598 7.5 8.66669C7.5 10.0474 8.61929 11.1667 10 11.1667Z"
+                    stroke="#E7000B" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <input type="text" name="destination" id="destination" required placeholder="Where do you want to go ?">
+            </div>
+
+          </div>
+
+          <div class="labinpu">
+            <label for="departure_time" class="labels">Departure Time</label>
+
+            <div class="inputs">
+              <div class="svgs"><svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 5.33337V10.3334L13.3333 12" stroke="#64748B" stroke-width="1.66667"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M10.0001 18.6667C14.6025 18.6667 18.3334 14.9358 18.3334 10.3334C18.3334 5.73102 14.6025 2.00006 10.0001 2.00006C5.39771 2.00006 1.66675 5.73102 1.66675 10.3334C1.66675 14.9358 5.39771 18.6667 10.0001 18.6667Z"
+                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <input type="datetime-local" name="departure_time" id="departure_time" required>
+            </div>
+
+          </div>
+
+          <div id="submitt">
+            <button id="submit_btn"><img src="../../assets/Icon.svg" id="search-icon" alt="search">Find your routes</button>
+          </div>
+
+        </form>
+      </div>
+
+
+
+
+
+      <div class="other_info">
+
+        <div class="recent_searches">
+          <h2 id="recent_searches_title">Recent Searches</h2>
+          <div class="recent_destination">
+            <div class="recent_locations">
+              <div><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.6668 7.00002C13.6668 10.3287 9.97412 13.7954 8.73412 14.866C8.61861 14.9529 8.47799 14.9999 8.33346 14.9999C8.18892 14.9999 8.04831 14.9529 7.93279 14.866C6.69279 13.7954 3.00012 10.3287 3.00012 7.00002C3.00012 5.58553 3.56203 4.22898 4.56222 3.22878C5.56241 2.22859 6.91897 1.66669 8.33346 1.66669C9.74794 1.66669 11.1045 2.22859 12.1047 3.22878C13.1049 4.22898 13.6668 5.58553 13.6668 7.00002Z"
+                    stroke="#00A63E" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M8.3335 9.00006C9.43807 9.00006 10.3335 8.10463 10.3335 7.00006C10.3335 5.89549 9.43807 5.00006 8.3335 5.00006C7.22893 5.00006 6.3335 5.89549 6.3335 7.00006C6.3335 8.10463 7.22893 9.00006 8.3335 9.00006Z"
+                    stroke="#00A63E" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <p>Central Station</p>
+              </div>
+            </div>
+            <div class="recent_locations">
+              <div><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.6668 7.00002C13.6668 10.3287 9.97412 13.7954 8.73412 14.866C8.61861 14.9529 8.47799 14.9999 8.33346 14.9999C8.18892 14.9999 8.04831 14.9529 7.93279 14.866C6.69279 13.7954 3.00012 10.3287 3.00012 7.00002C3.00012 5.58553 3.56203 4.22898 4.56222 3.22878C5.56241 2.22859 6.91897 1.66669 8.33346 1.66669C9.74794 1.66669 11.1045 2.22859 12.1047 3.22878C13.1049 4.22898 13.6668 5.58553 13.6668 7.00002Z"
+                    stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M8.3335 9.00006C9.43807 9.00006 10.3335 8.10463 10.3335 7.00006C10.3335 5.89549 9.43807 5.00006 8.3335 5.00006C7.22893 5.00006 6.3335 5.89549 6.3335 7.00006C6.3335 8.10463 7.22893 9.00006 8.3335 9.00006Z"
+                    stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+              </div>
+              <div>
+                <p>Airport Terminal</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="recent_destination">
+            <div class="recent_locations">
+              <div><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.6668 7.00002C13.6668 10.3287 9.97412 13.7954 8.73412 14.866C8.61861 14.9529 8.47799 14.9999 8.33346 14.9999C8.18892 14.9999 8.04831 14.9529 7.93279 14.866C6.69279 13.7954 3.00012 10.3287 3.00012 7.00002C3.00012 5.58553 3.56203 4.22898 4.56222 3.22878C5.56241 2.22859 6.91897 1.66669 8.33346 1.66669C9.74794 1.66669 11.1045 2.22859 12.1047 3.22878C13.1049 4.22898 13.6668 5.58553 13.6668 7.00002Z"
+                    stroke="#00A63E" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M8.3335 9.00006C9.43807 9.00006 10.3335 8.10463 10.3335 7.00006C10.3335 5.89549 9.43807 5.00006 8.3335 5.00006C7.22893 5.00006 6.3335 5.89549 6.3335 7.00006C6.3335 8.10463 7.22893 9.00006 8.3335 9.00006Z"
+                    stroke="#00A63E" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <p>Downtown Plaza</p>
+              </div>
+            </div>
+            <div class="recent_locations">
+              <div><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.6668 7.00002C13.6668 10.3287 9.97412 13.7954 8.73412 14.866C8.61861 14.9529 8.47799 14.9999 8.33346 14.9999C8.18892 14.9999 8.04831 14.9529 7.93279 14.866C6.69279 13.7954 3.00012 10.3287 3.00012 7.00002C3.00012 5.58553 3.56203 4.22898 4.56222 3.22878C5.56241 2.22859 6.91897 1.66669 8.33346 1.66669C9.74794 1.66669 11.1045 2.22859 12.1047 3.22878C13.1049 4.22898 13.6668 5.58553 13.6668 7.00002Z"
+                    stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M8.3335 9.00006C9.43807 9.00006 10.3335 8.10463 10.3335 7.00006C10.3335 5.89549 9.43807 5.00006 8.3335 5.00006C7.22893 5.00006 6.3335 5.89549 6.3335 7.00006C6.3335 8.10463 7.22893 9.00006 8.3335 9.00006Z"
+                    stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <p>University Campus</p>
+              </div>
+            </div>
+          </div>
+          <div class="recent_destination">
+            <div class="recent_locations">
+              <div><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.6668 7.00002C13.6668 10.3287 9.97412 13.7954 8.73412 14.866C8.61861 14.9529 8.47799 14.9999 8.33346 14.9999C8.18892 14.9999 8.04831 14.9529 7.93279 14.866C6.69279 13.7954 3.00012 10.3287 3.00012 7.00002C3.00012 5.58553 3.56203 4.22898 4.56222 3.22878C5.56241 2.22859 6.91897 1.66669 8.33346 1.66669C9.74794 1.66669 11.1045 2.22859 12.1047 3.22878C13.1049 4.22898 13.6668 5.58553 13.6668 7.00002Z"
+                    stroke="#00A63E" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M8.3335 9.00006C9.43807 9.00006 10.3335 8.10463 10.3335 7.00006C10.3335 5.89549 9.43807 5.00006 8.3335 5.00006C7.22893 5.00006 6.3335 5.89549 6.3335 7.00006C6.3335 8.10463 7.22893 9.00006 8.3335 9.00006Z"
+                    stroke="#00A63E" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <p>North Park</p>
+              </div>
+            </div>
+            <div class="recent_locations">
+              <div><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.6668 7.00002C13.6668 10.3287 9.97412 13.7954 8.73412 14.866C8.61861 14.9529 8.47799 14.9999 8.33346 14.9999C8.18892 14.9999 8.04831 14.9529 7.93279 14.866C6.69279 13.7954 3.00012 10.3287 3.00012 7.00002C3.00012 5.58553 3.56203 4.22898 4.56222 3.22878C5.56241 2.22859 6.91897 1.66669 8.33346 1.66669C9.74794 1.66669 11.1045 2.22859 12.1047 3.22878C13.1049 4.22898 13.6668 5.58553 13.6668 7.00002Z"
+                    stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M8.3335 9.00006C9.43807 9.00006 10.3335 8.10463 10.3335 7.00006C10.3335 5.89549 9.43807 5.00006 8.3335 5.00006C7.22893 5.00006 6.3335 5.89549 6.3335 7.00006C6.3335 8.10463 7.22893 9.00006 8.3335 9.00006Z"
+                    stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+              </div>
+              <div>
+                <p>Shopping Mall</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="popular_destination">
+          <h2 id="popular_destination_title">Popular Destination</h2>
+          <div class="popular_distination_lines">
+            <p class="the_text">Casbah</p>
+            <p class="the_text">Bab El Oued</p>
+            <p class="the_text">Ben Aknoun</p>
+            <p class="the_text">Bouzaréah</p>
+            <p class="the_text">El Biar</p>
+            <p class="the_text">Hydra</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Updates">
+      <div id="Updates_title_section">
+        <div id="update_title_svg">
+          <div id="the_svg_upd"><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_102_119)">
+                <path
+                  d="M9.15662 18.4624C9.3029 18.7157 9.5133 18.9261 9.76665 19.0724C10.02 19.2187 10.3074 19.2957 10.5999 19.2957C10.8925 19.2957 11.1799 19.2187 11.4332 19.0724C11.6866 18.9261 11.897 18.7157 12.0433 18.4624"
+                  stroke="#155DFC" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M3.31831 13.7342C3.20945 13.8535 3.13761 14.0019 3.11152 14.1612C3.08544 14.3206 3.10624 14.4842 3.1714 14.632C3.23656 14.7798 3.34326 14.9054 3.47852 14.9937C3.61379 15.082 3.77179 15.129 3.93331 15.1292H17.2666C17.4281 15.1292 17.5862 15.0823 17.7215 14.9942C17.8569 14.9061 17.9637 14.7806 18.0291 14.6329C18.0944 14.4852 18.1154 14.3217 18.0895 14.1623C18.0636 14.0029 17.992 13.8544 17.8833 13.735C16.775 12.5925 15.6 11.3783 15.6 7.62915C15.6 6.30307 15.0732 5.0313 14.1355 4.09362C13.1978 3.15593 11.9261 2.62915 10.6 2.62915C9.27389 2.62915 8.00213 3.15593 7.06444 4.09362C6.12676 5.0313 5.59998 6.30307 5.59998 7.62915C5.59998 11.3783 4.42414 12.5925 3.31831 13.7342Z"
+                  stroke="#155DFC" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+              <defs>
+                <clipPath id="clip0_102_119">
+                  <rect width="20" height="20" fill="white" transform="translate(0.599976 0.962402)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <h2 id="Updates_title">Latest Updates</h2>
+        </div>
+        <p id="The_Updates_introduction">Stay informed about the latest changes to routes and services</p>
+      </div>
+
+      <div class="the_updates">
+        <div class="an_update">
+          <div class="the_date">
+            <p>Oct 14, 2025</p>
+          </div>
+          <div class="the_update_text">
+            <p>New express bus route 45X now available for Airport Terminal</p>
+          </div>
+        </div>
+        <div class="an_update">
+          <div class="the_date">
+            <p>Oct 14, 2025</p>
+          </div>
+          <div class="the_update_text">
+            <p>Metro Line 3 extended hours on weekends starting this week</p>
+          </div>
+        </div>
+        <div class="an_update">
+          <div class="the_date">
+            <p>Oct 12, 2025</p>
+          </div>
+          <div class="the_update_text">
+            <p>Downtown Plaza station renovations completed ahead of schedule</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+  <footer></footer>
+
+</body>
+
+
+</html>

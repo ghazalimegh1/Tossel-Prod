@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard</title>
+    <link rel="stylesheet" href="../../css/driver_dashboard/driver_dashboard.css">
+    <script src="../../js/driver_dashboard/driver_dashboard.js" defer></script>
+    <script src="../../js/nav_footer/include.js" defer></script>
+</head>
+
+<body>
+    <nav></nav>
+
+    <main>
+        <scetion class="head-section">
+            <div class="head-section-container">
+                <div class="welcome-driver-container">
+                    <div class="welcome-driver">
+                        <div class="driver-title">
+                            <div>
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 6V12" stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M15 6V12" stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M2 12H21.6" stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M18 18H21C21 18 21.5 16.3 21.8 15.2C21.9 14.8 22 14.4 22 14C22 13.6 21.9 13.2 21.8 12.8L20.4 7.8C20.1 6.8 19.1 6 18 6H4C3.46957 6 2.96086 6.21071 2.58579 6.58579C2.21071 6.96086 2 7.46957 2 8V18H5"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M7 20C8.10457 20 9 19.1046 9 18C9 16.8954 8.10457 16 7 16C5.89543 16 5 16.8954 5 18C5 19.1046 5.89543 20 7 20Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M9 18H14" stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M16 20C17.1046 20 18 19.1046 18 18C18 16.8954 17.1046 16 16 16C14.8954 16 14 16.8954 14 18C14 19.1046 14.8954 20 16 20Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div>Driver Dashboard</div>
+                            </div>
+                            <div>Welcome back, Michael Johnson</div>
+                        </div>
+                    </div>
+                    <div class="on-duty">
+                        <div>On Duty</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="driver-grid">
+                    <div class="info">
+                        <div class="info-d">Today's Trips</div>
+                        <div class="info-stat">3</div>
+                    </div>
+                    <div class="info">
+                        <div class="info-d">Total Passengers</div>
+                        <div class="info-stat">156</div>
+                    </div>
+                    <div class="info">
+                        <div class="info-d">On Time</div>
+                        <div class="info-stat">95%</div>
+                    </div>
+                    <div class="info">
+                        <div class="info-d">Current Load</div>
+                        <div class="info-stat">23</div>
+                    </div>
+                </div>
+            </div>
+        </scetion>
+
+        <section class="main-section">
+            <div class="main-section-container">
+                <div class="left">
+                    <div class="current-stop">
+                        <div class="current-head">
+                            <div class="current-head-left">
+                                <div class="current-head-title">Current Stop</div>
+                                <div class="current-head-description">Confirm your arrival and manage passengers</div>
+                            </div>
+                            <div class="current-head-right on-time">On Time</div>
+                        </div>
+
+                        <div class="current-main">
+                            <div class="current-main-head">
+                                <div class="current-main-head-left">
+                                    <svg width="49" height="49" viewBox="0 0 49 49" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.492188 24.3359C0.492188 11.0811 11.2374 0.335938 24.4922 0.335938C37.747 0.335938 48.4922 11.0811 48.4922 24.3359C48.4922 37.5908 37.747 48.3359 24.4922 48.3359C11.2374 48.3359 0.492188 37.5908 0.492188 24.3359Z"
+                                            fill="#2563EB" />
+                                        <path
+                                            d="M32.4922 22.3359C32.4922 27.3289 26.9532 32.5289 25.0932 34.1349C24.9199 34.2652 24.709 34.3357 24.4922 34.3357C24.2754 34.3357 24.0645 34.2652 23.8912 34.1349C22.0312 32.5289 16.4922 27.3289 16.4922 22.3359C16.4922 20.2142 17.335 18.1794 18.8353 16.6791C20.3356 15.1788 22.3705 14.3359 24.4922 14.3359C26.6139 14.3359 28.6488 15.1788 30.149 16.6791C31.6493 18.1794 32.4922 20.2142 32.4922 22.3359Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M24.4922 25.3359C26.149 25.3359 27.4922 23.9928 27.4922 22.3359C27.4922 20.6791 26.149 19.3359 24.4922 19.3359C22.8353 19.3359 21.4922 20.6791 21.4922 22.3359C21.4922 23.9928 22.8353 25.3359 24.4922 25.3359Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="current-main-head-right">
+                                    <div>Park Avenue</div>
+                                    <div>Scheduled: 06:42 AM • Actual: 06:43 AM</div>
+                                </div>
+                            </div>
+                            <div class="current-main-stats">
+                                <div class="current-main-stat">
+                                    <div>Boarding</div>
+                                    <div>5 passengers</div>
+                                </div>
+                                <div class="current-main-stat">
+                                    <div>Alighting</div>
+                                    <div>3 passengers</div>
+                                </div>
+                            </div>
+                            <div class="current-buttons">
+                                <div class="current-button">
+                                    <div>
+                                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_82_499)">
+                                                <path
+                                                    d="M15.2542 6.91023C15.5584 8.40297 15.3416 9.95487 14.64 11.3071C13.9385 12.6594 12.7945 13.7303 11.399 14.3412C10.0034 14.9521 8.44062 15.0661 6.97117 14.6642C5.50172 14.2623 4.21446 13.3688 3.32405 12.1327C2.43365 10.8966 1.99392 9.39263 2.0782 7.87155C2.16248 6.35047 2.76567 4.90425 3.78719 3.77407C4.8087 2.6439 6.18679 1.89808 7.69165 1.661C9.1965 1.42391 10.7371 1.70989 12.0567 2.47123"
+                                                    stroke="white" stroke-width="1.33203" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M6.72852 7.57617L8.72656 9.57422L15.3867 2.91406"
+                                                    stroke="white" stroke-width="1.33203" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_82_499">
+                                                    <rect width="15.9844" height="15.9844" fill="white"
+                                                        transform="translate(0.734375 0.25)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div>Confirm Arrival</div>
+                                </div>
+                                <div class="current-button login option"> 
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_82_504)">
+                                            <path
+                                                d="M8.6875 14.9023C12.3658 14.9023 15.3477 11.9205 15.3477 8.24219C15.3477 4.56388 12.3658 1.58203 8.6875 1.58203C5.0092 1.58203 2.02734 4.56388 2.02734 8.24219C2.02734 11.9205 5.0092 14.9023 8.6875 14.9023Z"
+                                                stroke="#0F172A" stroke-width="1.33203" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M8.6875 5.57812V8.24219" stroke="#0F172A" stroke-width="1.33203"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M8.6875 10.9062H8.69416" stroke="#0F172A" stroke-width="1.33203"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_82_504">
+                                                <rect width="15.9844" height="15.9844" fill="white"
+                                                    transform="translate(0.695312 0.25)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="update-status">
+                            <div class="update-status-title">Update Route Status</div>
+                            <div class="status">
+                                <div>On Time</div>
+                                <div>
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                            <path d="M4.67578 6.2207L8.67188 10.2168L12.668 6.2207" stroke="#64748B"
+                                                stroke-width="1.33203" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="states">
+                                <div class="state option actual">
+                                    <div>On Time</div>
+                                    <div>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="state option">
+                                    <div>Delayed</div>
+                                    <div></div>
+                                </div>
+                                <div class="state option">
+                                    <div>Running Early</div>
+                                    <div></div>
+                                </div>
+                                <div class="state option">
+                                    <div>Technical Issue</div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="add-notes">
+                            <div class="add-notes-title">Add Notes (Optional)</div>
+                            <div>
+                                <textarea
+                                    placeholder="Report any issues, delays, or important information..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-stops" id="routeStops">
+                        <div class="rsh">
+                            <div class="rst">Route Stops</div>
+                            <div class="rsd">Track your progress along the route</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="right">
+                    <div class="trip-details">
+                        <div class="rt">Trip Details</div>
+                        <div class="details-container">
+                            <div class="detail">
+                                <div>Driver ID</div>
+                                <div>DRV-42531</div>
+                            </div>
+                            <div class="detail">
+                                <div>Vehicle</div>
+                                <div>Bus 42</div>
+                            </div>
+                            <div class="detail">
+                                <div>Route</div>
+                                <div>Downtown Express</div>
+                            </div>
+                            <div class="detail">
+                                <div>Shift</div>
+                                <div>06:00 AM - 02:00 PM</div>
+                            </div>
+                        </div>
+                        <div class="r-bottons">
+                            <div class="r-button">
+                                <div>
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_82_669)">
+                                            <path
+                                                d="M8.64844 1.53516L13.3105 14.1895L8.64844 11.5254L3.98633 14.1895L8.64844 1.53516Z"
+                                                stroke="#0F172A" stroke-width="1.33203" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_82_669">
+                                                <rect width="15.9844" height="15.9844" fill="white"
+                                                    transform="translate(0.65625 0.203125)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div>Open Navigation</div>
+                            </div>
+                            <div class="r-button">
+                                <div>
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_82_673)">
+                                            <path
+                                                d="M8.64844 14.8477C12.3267 14.8477 15.3086 11.8658 15.3086 8.1875C15.3086 4.5092 12.3267 1.52734 8.64844 1.52734C4.97013 1.52734 1.98828 4.5092 1.98828 8.1875C1.98828 11.8658 4.97013 14.8477 8.64844 14.8477Z"
+                                                stroke="#0F172A" stroke-width="1.33203" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M8.64844 5.52344V8.1875" stroke="#0F172A" stroke-width="1.33203"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M8.64844 10.8516H8.6551" stroke="#0F172A" stroke-width="1.33203"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_82_673">
+                                                <rect width="15.9844" height="15.9844" fill="white"
+                                                    transform="translate(0.65625 0.195312)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div>Report Emergency</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <div class="rt">Quick Actions</div>
+                        <div class="r-bottons">
+                            <div class="r-button">
+                                <div><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_82_683)">
+                                            <path
+                                                d="M6.6504 6.19928C6.65004 6.08108 6.68114 5.96492 6.74051 5.86272C6.79989 5.76051 6.88539 5.67595 6.98824 5.61771C7.09109 5.55947 7.20759 5.52965 7.32577 5.53132C7.44395 5.53298 7.55957 5.56606 7.66074 5.62717L10.9888 7.62322C11.0879 7.68227 11.1699 7.76604 11.2269 7.86633C11.2839 7.96662 11.3139 8.07998 11.3139 8.19532C11.3139 8.31067 11.2839 8.42403 11.2269 8.52432C11.1699 8.62461 11.0879 8.70838 10.9888 8.76743L7.66074 10.7635C7.55952 10.8246 7.44385 10.8577 7.3256 10.8593C7.20736 10.861 7.09082 10.8311 6.98795 10.7728C6.88507 10.7145 6.79958 10.6298 6.74026 10.5275C6.68094 10.4252 6.64992 10.309 6.6504 10.1907V6.19928Z"
+                                                stroke="#0F172A" stroke-width="1.33203" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M8.64844 14.8555C12.3267 14.8555 15.3086 11.8736 15.3086 8.19531C15.3086 4.51701 12.3267 1.53516 8.64844 1.53516C4.97013 1.53516 1.98828 4.51701 1.98828 8.19531C1.98828 11.8736 4.97013 14.8555 8.64844 14.8555Z"
+                                                stroke="#0F172A" stroke-width="1.33203" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_82_683">
+                                                <rect width="15.9844" height="15.9844" fill="white"
+                                                    transform="translate(0.65625 0.203125)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div>Start Break</div>
+                            </div>
+                            <div class="r-button">
+                                <div>
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_82_688)">
+                                            <path
+                                                d="M8.64844 14.8477C12.3267 14.8477 15.3086 11.8658 15.3086 8.1875C15.3086 4.5092 12.3267 1.52734 8.64844 1.52734C4.97013 1.52734 1.98828 4.5092 1.98828 8.1875C1.98828 11.8658 4.97013 14.8477 8.64844 14.8477Z"
+                                                stroke="#0F172A" stroke-width="1.33203" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M7.31641 10.1855V6.18945" stroke="#0F172A" stroke-width="1.33203"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.98047 10.1855V6.18945" stroke="#0F172A" stroke-width="1.33203"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_82_688">
+                                                <rect width="15.9844" height="15.9844" fill="white"
+                                                    transform="translate(0.65625 0.195312)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div>Pause Route</div>
+                            </div>
+                            <div class="r-button">
+                                <div>
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_82_694)">
+                                            <path
+                                                d="M3.32031 14.8398V2.85156C3.32031 2.74817 3.34439 2.64619 3.39063 2.55371C3.43687 2.46123 3.504 2.38079 3.58672 2.31875C4.27843 1.79997 5.11974 1.51953 5.98438 1.51953C7.98242 1.51953 9.31445 2.85156 10.8683 2.85156C11.7563 2.85156 12.4372 2.67396 12.9109 2.31875C13.0099 2.24454 13.1275 2.19935 13.2507 2.18824C13.3739 2.17713 13.4978 2.20055 13.6084 2.25586C13.719 2.31117 13.8121 2.3962 13.8771 2.50142C13.9421 2.60663 13.9766 2.72788 13.9766 2.85156V9.51172C13.9766 9.61511 13.9525 9.71709 13.9062 9.80957C13.86 9.90205 13.7929 9.98249 13.7102 10.0445C13.0184 10.5633 12.1771 10.8438 11.3125 10.8438C9.31445 10.8438 7.98242 9.51172 5.98438 9.51172C5.00141 9.51174 4.05295 9.87406 3.32031 10.5294"
+                                                stroke="#0F172A" stroke-width="1.33203" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_82_694">
+                                                <rect width="15.9844" height="15.9844" fill="white"
+                                                    transform="translate(0.65625 0.1875)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div>End Shift</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reminder">
+                        <div class="rrt rt">
+                            <div>
+                                <svg width="18" height="18" viewBox="0 0 21 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_82_699)">
+                                        <path
+                                            d="M18.3167 8.50967C18.6971 10.3767 18.426 12.3177 17.5485 14.009C16.671 15.7003 15.2403 17.0397 13.4948 17.8038C11.7493 18.5679 9.79467 18.7105 7.95679 18.2079C6.1189 17.7052 4.50888 16.5877 3.39522 15.0416C2.28156 13.4956 1.73157 11.6145 1.83698 9.71203C1.94239 7.80956 2.69683 6.00073 3.97447 4.58718C5.25211 3.17364 6.97574 2.24082 8.85791 1.94428C10.7401 1.64775 12.667 2.00543 14.3174 2.95768"
+                                            stroke="#155DFC" stroke-width="1.66602" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M7.65332 9.34277L10.1523 11.8418L18.4824 3.51172" stroke="#155DFC"
+                                            stroke-width="1.66602" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_82_699">
+                                            <rect width="19.9922" height="19.9922" fill="white"
+                                                transform="translate(0.15625 0.179688)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div>Reminder</div>
+                        </div>
+                        <div class="reminds">
+                            <div class="remind">• Confirm arrival at each stop</div>
+                            <div class="remind">• Update status for any delays</div>
+                            <div class="remind">• Report issues immediately</div>
+                            <div class="remind">• Maintain passenger count accuracy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>

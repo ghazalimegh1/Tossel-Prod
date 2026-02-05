@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        button {
+            background: #2563EB;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        .step {
+            padding: 10px;
+            margin: 10px 0;
+            background: white;
+            border-left: 4px solid #2563EB;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Route Finder Test</h1>
+
+    <div>
+        <input type="text" id="start" placeholder="Start (e.g., El Harrach)" style="width: 100%">
+        <input type="text" id="dest" placeholder="Destination (e.g., Hussein Dey)" style="width: 100%">
+        <button onclick="findRoute()">Find Route</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        async function findRoute() {
+            const start = document.getElementById('start').value;
+            const dest = document.getElementById('dest').value;
+            const resultDiv = document.getElementById('result');
+
+            resultDiv.innerHTML = '<p>Loading...</p>';
+
+            try {
+                const response = await fetch(`http://localhost:5000/api/routes/find?start=${encodeURIComponent(start)}&destination=${encodeURIComponent(dest)}`);
+                const routes = await response.json();
+
+                if (routes.length === 0) {
+                    resultDiv.innerHTML = '<p>No route found</p>';
+                    return;
+                }
+
+                const route = routes[0];
+                let html = `
+                    <h2>${route.title}</h2>
+                    <p><strong>Duration:</strong> ${route.duration} minutes</p>
+                    <p><strong>Cost:</strong> ${route.cost} DA</p>
+                    <h3>Steps:</h3>
+                `;
+
+                route.steps.forEach((step, i) => {
+                    html += `
+                        <div class="step">
+                            <strong>Step ${i + 1}:</strong> ${step.step_instruction}<br>
+                            <small>${step.step_duration} minutes - ${step.type}</small>
+                        </div>
+                    `;
+                });
+
+                resultDiv.innerHTML = html;
+            } catch (error) {
+                resultDiv.innerHTML = `<p style="color: red">Error: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

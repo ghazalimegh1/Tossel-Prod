@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/chosen_route_page/chosen_route.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <script src="../../js/nav_footer/include.js" defer></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+
+<body>
+    <nav></nav>
+    <main>
+        <div class="chosen-route-header">
+            <div class="chosen-route-header-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 11L22 2L13 21L11 13L3 11Z" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+
+                <h3>Live Tracking</h3>
+            </div>
+            <div class="chosen-route-header-subtitle">
+                <p>Follow your journey in real-time</p>
+            </div>
+        </div>
+
+
+        <div class="chosen-route">
+            <div class="chosen-route-container" id="chosen-route-container">
+                <div class="switch-step-map">
+                    <div class="step-by-step switch-active" id="step-by-step">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.354 15.3333C5.45857 15.3333 6.354 14.4378 6.354 13.3333C6.354 12.2287 5.45857 11.3333 4.354 11.3333C3.24943 11.3333 2.354 12.2287 2.354 13.3333C2.354 14.4378 3.24943 15.3333 4.354 15.3333Z"
+                                stroke="#0F172A" stroke-width="1.33333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M6.354 13.3333H12.0207C12.6395 13.3333 13.233 13.0875 13.6706 12.6499C14.1082 12.2123 14.354 11.6188 14.354 11C14.354 10.3812 14.1082 9.78767 13.6706 9.35008C13.233 8.9125 12.6395 8.66667 12.0207 8.66667H4.68734C4.0685 8.66667 3.47501 8.42083 3.03742 7.98325C2.59984 7.54566 2.354 6.95217 2.354 6.33333C2.354 5.71449 2.59984 5.121 3.03742 4.68342C3.47501 4.24583 4.0685 4 4.68734 4H10.354"
+                                stroke="#0F172A" stroke-width="1.33333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M12.354 6C13.4586 6 14.354 5.10457 14.354 4C14.354 2.89543 13.4586 2 12.354 2C11.2494 2 10.354 2.89543 10.354 4C10.354 5.10457 11.2494 6 12.354 6Z"
+                                stroke="#0F172A" stroke-width="1.33333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                        Step-by-Step
+                    </div>
+                    <div class="map" id="map-switch-btn">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.1643 4.3686C10.3493 4.46107 10.5534 4.50922 10.7603 4.50922C10.9671 4.50922 11.1712 4.46107 11.3563 4.3686L13.7956 3.1486C13.8973 3.09777 14.0103 3.0738 14.1239 3.07898C14.2375 3.08415 14.3479 3.11829 14.4446 3.17815C14.5412 3.23801 14.621 3.32161 14.6762 3.42098C14.7315 3.52036 14.7604 3.63222 14.7603 3.74593V12.2553C14.7602 12.379 14.7257 12.5003 14.6606 12.6056C14.5954 12.7109 14.5023 12.7959 14.3916 12.8513L11.3563 14.3693C11.1712 14.4617 10.9671 14.5099 10.7603 14.5099C10.5534 14.5099 10.3493 14.4617 10.1643 14.3693L7.35626 12.9653C7.17119 12.8728 6.96714 12.8246 6.76026 12.8246C6.55337 12.8246 6.34932 12.8728 6.16426 12.9653L3.72492 14.1853C3.62316 14.2361 3.51007 14.2601 3.39643 14.2549C3.28278 14.2497 3.17236 14.2155 3.07567 14.1555C2.97897 14.0956 2.89923 14.0119 2.84402 13.9124C2.78881 13.813 2.75998 13.701 2.76026 13.5873V5.0786C2.76032 4.95482 2.79484 4.83351 2.85996 4.72825C2.92507 4.62298 3.0182 4.53792 3.12892 4.4826L6.16426 2.9646C6.34932 2.87212 6.55337 2.82397 6.76026 2.82397C6.96714 2.82397 7.17119 2.87212 7.35626 2.9646L10.1643 4.3686Z"
+                                stroke="#0F172A" stroke-width="1.33333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M10.7603 4.50928V14.5093" stroke="#0F172A" stroke-width="1.33333"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.76025 2.82397V12.824" stroke="#0F172A" stroke-width="1.33333"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Map
+                    </div>
+                </div>
+                <div class="step-by-step-direction" id="step-by-step-direction">
+                    <h4>Step-by-Step Directions</h4>
+                    <p>Detailed route instructions</p>
+                    <div class="steps-detailed" id="steps-detailed">
+                    </div>
+                </div>
+
+            </div>
+            <div class="live-updates" id="live-updates">
+                <h4>Live Updates</h4>
+                <p>Real-time vehicle arrivals</p>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="../../js/chosen_route_page/chosen_route.js"></script>
+</body>
+
+
+</html>

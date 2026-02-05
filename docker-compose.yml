@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: tossal_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tossal_user
+      POSTGRES_PASSWORD: tossal_password
+      POSTGRES_DB: tossal_travel
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - tossal_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tossal_user -d tossal_travel"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend Service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: tossal_backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://tossal_user:tossal_password@postgres:5432/tossal_travel
+      JWT_SECRET: ${JWT_SECRET:-your-super-secret-jwt-key-change-in-production}
+      PORT: 5000
+      NODE_ENV: production
+    ports:
+      - "5000:5000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - tossal_network
+    volumes:
+      - ./backend/data:/app/data  # Mount data directory for transport network files
+
+  # Frontend Service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: tossal_frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - tossal_network
+
+networks:
+  tossal_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local

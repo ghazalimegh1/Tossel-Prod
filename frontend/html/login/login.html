@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login tossel</title>
+      <link rel="stylesheet" href="../../css/login_page/login.css">
+   </head>
+   <body>
+      <div class="main_container">
+         <div class="main_header">
+            <div class="main_title">
+               <div id="iconTitle"></div>
+               <h1 class="title">Tossal</h1>
+            </div>
+            <h2 class="welcome_msg">Welcom back! Sign in to your account</h2>
+         </div>
+         <div class="main_forum">
+            <div class="credential_container">
+               <h1 class="welcome_msg"></h1>
+               <p class="welcome_msg">Enter your credential to access your account</p>
+               <form class="mother_container">
+                  <div class="email_container input_container">
+                     <label class="input_label">Email</label>
+                     <div class="sub_email_container">
+                        <div id="iconEmail"></div>
+                        <input 
+                           id="email_input_data"
+                           class="input_box" 
+                           type="text" 
+                           placeholder="Mohammed@gmail.com" 
+                           required maxlength="100">
+                     </div>
+                  </div>
+                  <div class="password_container input_container">
+                     <label class="input_label">Password</label>
+                     <div class="sub_password_container">
+                        <div id="iconPassword"></div>
+                        <input 
+                           id="password_input_data"
+                           class="input_box" 
+                           type="password" 
+                           required maxlength="100" 
+                           placeholder="••••••">
+                        <button 
+                           type="button"
+                           class="toggle-password"
+                           id="togglePassword"
+                           aria-label="Show password"
+                           aria-pressed="false"
+                           title="Show password">
+                           <div id="iconTogglePassword"></div>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="options_container">
+                      <div class="remember_option">
+                         <input type="checkbox">
+                         <label>remember me</label>                                   
+                      </div>
+                      <div class="remember_option">
+                         <a class="forget_option" href="#">Forgot password?</a>
+                      </div>
+                  </div>
+                  <button class="signin_button" type="submit">Sign in</button>
+               </form>
+               <div class="seperator"></div>
+            </div>
+            <div class="refer_signup welcome_msg">
+               <p>Don't have an account ? <a href="../../html/sign_up/sign_up.html">Sign up</a></p>
+            </div>
+         </div>
+      </div>
+      <script src="../../js/login_page/login.js"></script>
+   </body>
+</html>

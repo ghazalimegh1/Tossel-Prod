@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arimo", sans-serif;
+}
+
+.head-section {
+  height: 272px;
+  background: linear-gradient(135deg, #155DFC 2%, #0092B8 80%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.little-title {
+  width: 190px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 7px 15px;
+  border-radius: 2.68435e7px;
+  box-sizing: content-box;
+  margin-bottom: 1.5rem;
+}
+
+.little-title div:last-of-type {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.main-title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.main-title span {
+  color: #53eafd;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+  color: #dbeafe;
+  padding-top: 1%;
+}
+
+body {
+  background: #fff;
+  color: #0f172a;
+  margin: 0% 0%;
+}
+
+.content {
+  margin: 2% 5%;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+}
+
+.filling_info_about_route {
+  width: 65%;
+  padding: 3%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#form_title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 133%;
+  color: #0f172a;
+}
+
+#info_intro {
+  font-size: 16px;
+  line-height: 150%;
+  color: #64748b;
+  margin-top: 2%;
+}
+
+#the_info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 2%;
+}
+
+.labels {
+  font-size: 16px;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+input,
+#submit_btn {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid #f8fafc;
+  padding: 0 10%;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 16px;
+}
+input {
+  padding: 0 0;
+  padding-left: 5px;
+}
+.inputs {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0;
+  align-items: center;
+  background: #f8fafc;
+  border-radius: 16px;
+  justify-content: flex-start;
+}
+input:focus {
+  outline: none;
+  border: 1px solid #f8fafc;
+}
+.inputs:focus-within {
+  outline: none;
+  border: 1px solid #2563eb;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+#submit_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-radius: 16px;
+  margin-top: 30px;
+}
+
+#submit_btn:hover {
+  background: #2563eb;
+  opacity: 90%;
+}
+
+#search-icon {
+  margin-right: 5px;
+  margin-top: 0px;
+}
+
+.other_info {
+  margin-top: 30px;
+}
+.svgs {
+  background: #f8fafc;
+  margin: 0 0;
+  margin-left: 5px;
+}
+.labinpu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.other_info {
+  width: 32%;
+  margin: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.recent_searches {
+  width: 100%;
+  padding: 7%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.recent_destination {
+  border: 0.666667px solid #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5%;
+  gap: 9px;
+}
+#recent_searches_title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #0f172a;
+  margin-bottom: 13px;
+}
+.recent_locations {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.recent_destination:hover{
+  background-color: #f1f5f9;
+}
+.popular_destination {
+  width: 100%;
+  padding: 7%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.popular_distination_lines {
+  width: 100%;
+  padding: 0 0;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.the_text {
+  border-radius: 10px;
+  background: #10b981;
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 133%;
+  white-space: nowrap;
+}
+.the_text:hover{
+ background: #2563eb;
+}
+#popular_destination_title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #0f172a;
+  margin-bottom: 13px;
+}
+#submitt {
+  background-color: #fff;
+}
+.Updates {
+  margin: 2% 5%;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5%;
+  background: #fff;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #eff6ff 0%, #ecfeff 100%);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+.Updates_title_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#update_title_svg {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1%;
+  align-items: center;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+#the_svg_upd {
+  width: 20px;
+  height: 20px;
+}
+#Updates_title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #0f172a;
+}
+#The_Updates_introduction {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #64748b;
+  margin-bottom: 13px;
+}
+.the_updates {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 13px;
+}
+.an_update {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 0.8px solid #e2e8f0;
+  height: 50px;
+  gap: 2%;
+}
+.the_date {
+  background: #ffffff;
+  border: 0.8px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0 1%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  color: #0f172a;
+}
+.the_update_text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 143%;
+  color: #64748b;
+}
+
+
+@media (max-width: 900px) {
+  .content {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.other_info {
+  width: 100%;
+}
+.filling_info_about_route {
+  width: 100%;
+}
+#form_title {
+  font-size: 29px;
+}
+#info_intro, .labels,input,
+#submit_btn  ,.recent_locations p{
+  font-size: 18px;
+}
+#recent_searches_title,#popular_destination_title,.the_text{
+  font-size: 18px;
+}
+
+}
+
+@media (max-width: 575px) {
+  #form_title {
+  font-size: 21px;
+}
+#info_intro, .labels,input,
+#submit_btn ,.recent_locations p {
+  font-size: 17px;
+}
+#recent_searches_title,#popular_destination_title{
+  font-size: 17px;
+}
+.popular_distination_lines .the_text{
+  font-size: 14px;
+}
+.description {
+  font-size: 18px;
+}
+
+.main-title {
+  font-size: 40px;
+}
+
+}
+
+@media (max-width: 600px) {
+  .the_update_text,#Updates_title,#The_Updates_introduction,.the_date{
+  font-size: 15px;
+}
+}
+
+
+
+@media (max-width: 475px) {
+  #info_intro, .labels,input,
+#submit_btn ,.recent_locations p {
+  font-size: 15px;
+}
+#recent_searches_title,#Updates_title,#popular_destination_title{
+  font-size: 15px;
+}
+.popular_distination_lines .the_text{
+  font-size: 12px;
+}
+.description {
+  font-size: 16px;
+}
+
+.main-title {
+  font-size: 38px;
+}
+ .the_update_text,#The_Updates_introduction,.the_date{
+  font-size: 12px;
+}
+
+}
+@media (max-width: 500px) {
+  #form_title {
+  font-size: 18px;
+}
+    #info_intro, .labels,input,
+#submit_btn  ,.recent_locations p{
+  font-size: 13px;
+}
+#recent_searches_title,#Updates_title,#popular_destination_title{
+  font-size: 15px;
+}
+ .popular_distination_lines .the_text{
+  font-size: 11px;
+}
+ .the_update_text,#The_Updates_introduction,.the_date{
+  font-size: 13px;
+}
+.description {
+  font-size: 14px;
+}
+
+.main-title {
+  font-size: 35px;
+}
+}
