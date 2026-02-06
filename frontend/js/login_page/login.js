@@ -245,7 +245,16 @@ submit_button.addEventListener("click", async (e) => {
                 // Store JWT token
                 localStorage.setItem("authToken", data.token);
                 localStorage.setItem("user", JSON.stringify(data.user));
-                window.location.href = "../../html/home/home.html?logged=true";
+
+                // Check if user is admin and store role
+                if (username === "admin@gmail.com" || data.user.email === "admin@gmail.com" || data.user.username === "admin") {
+                    localStorage.setItem("userRole", "admin");
+                    // Redirect admin to driver dashboard
+                    window.location.href = "../../html/driver_dashboard/driver_dashboard.html";
+                } else {
+                    localStorage.setItem("userRole", "user");
+                    window.location.href = "../../html/home/home.html?logged=true";
+                }
             } else {
                 // Show error
                 showLoginError(data.message || "Login failed");

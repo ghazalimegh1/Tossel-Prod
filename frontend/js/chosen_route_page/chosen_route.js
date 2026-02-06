@@ -44,7 +44,7 @@ function initChosenRouteMap() {
 function drawChosenRoute() {
     if (!map || !chosen_route) return;
 
-    fetch("http://localhost:5000/api/routes/locations")
+    fetch("/api/routes/locations")
         .then(res => res.json())
         .then(data => {
             const nodes = data.knownLocations;
@@ -154,6 +154,12 @@ const means_logos = {
                 <path d="M18 22.3333L16 19.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M8 15.3333H8.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M16 15.3333H16.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>`,
+    "transfer": `<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8.66663L19.3333 5.33329L16 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 10.6666V8.99996C4 8.11591 4.35119 7.26806 4.97631 6.64294C5.60143 6.01782 6.44928 5.66663 7.33333 5.66663H19.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.33333 14.6666L5 17.9999L8.33333 21.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.3333 12.6666V14.3333C19.3333 15.2173 18.9821 16.0652 18.357 16.6903C17.7319 17.3154 16.884 17.6666 16 17.6666H5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>`
 }
 

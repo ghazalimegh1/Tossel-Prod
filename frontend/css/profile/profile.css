@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Arimo", sans-serif;
+}
+
+body {
+    background-color: #FAFBFC;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2rem;
+    padding-top: 100px;
+    /* Space for fixed nav */
+}
+
+/* Header Section */
+.profile-header {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile-title h1 {
+    font-size: 2rem;
+    color: #0F172A;
+    margin-bottom: 0.5rem;
+}
+
+.profile-title p {
+    color: #64748B;
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #E2E8F0;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #EFF6FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-avatar svg {
+    width: 40px;
+    height: 40px;
+}
+
+.user-info-text h2 {
+    font-size: 1.5rem;
+    color: #1E293B;
+}
+
+.user-info-text p {
+    color: #64748B;
+    font-size: 1rem;
+}
+
+/* Trips Section */
+.saved-trips-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.section-title h3 {
+    font-size: 1.25rem;
+    color: #0F172A;
+}
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.loading-trips {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    color: #64748B;
+}
+
+.trip-card {
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    background: #fff;
+}
+
+.trip-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.trip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.trip-route {
+    flex: 1;
+}
+
+.trip-route h4 {
+    font-size: 1.1rem;
+    color: #0F172A;
+    margin-bottom: 0.25rem;
+}
+
+.trip-meta {
+    font-size: 0.875rem;
+    color: #64748B;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.trip-stats {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #F1F5F9;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+.stat svg {
+    width: 16px;
+    height: 16px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #EF4444;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.delete-btn:hover {
+    background: #FEF2F2;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+        padding-top: 80px;
+    }
+
+    .profile-header,
+    .saved-trips-section {
+        padding: 1.5rem;
+    }
+
+    .user-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -166,6 +166,14 @@ serviceContainers.forEach((container) => {
 
     switch (serviceName) {
       case "find route":
+        // Check if user is logged in
+        const token = localStorage.getItem("authToken");
+        const user = localStorage.getItem("user");
+        if (!token && !user) {
+          // Redirect to login page if not logged in
+          window.location.href = "../../html/login/login.html";
+          return;
+        }
         link = "route_finder";
         break;
       case "driver dashboard":
@@ -206,6 +214,14 @@ buttons.forEach((button) => {
 
     switch (text) {
       case "find a route":
+        // Check if user is logged in
+        const token = localStorage.getItem("authToken");
+        const user = localStorage.getItem("user");
+        if (!token && !user) {
+          // Redirect to login page if not logged in
+          window.location.href = "../../html/login/login.html";
+          return;
+        }
         link = "route_finder";
         break;
       case "create account":

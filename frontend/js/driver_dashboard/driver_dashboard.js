@@ -4,7 +4,7 @@ let dutyText = document.querySelector(".on-duty div:first-child");
 let isClicked = false;
 
 // Backend API Integration
-const API_URL = "http://localhost:5000/api/driver";
+const API_URL = "/api/driver";
 let stops = [];
 
 // Fetch Initial State
@@ -163,15 +163,20 @@ function createRouteStops(stopsData) {
     let currentStopTitle = document.querySelector(".current-main-head-right > div:first-child");
     let currentStopSchedual = document.querySelector(".current-main-head-right > div:last-child");
 
-    if (!confirmButton.classList.contains("confirm-button-disabled")) {
-      let current = stopsData.filter(e => e.status === "Current")[0];
-      if (current) {
-        currentStopTitle.innerHTML = current.name;
-        currentStopSchedual.innerHTML = `Scheduled: ${current.time}`
-      } else {
-        // Maybe finished?
+    // Always check for current stop and update UI accordingly
+    let current = stopsData.filter(e => e.status === "Current")[0];
+    if (current) {
+      currentStopTitle.innerHTML = current.name;
+      currentStopSchedual.innerHTML = `Scheduled: ${current.time}`;
+      confirmButton.classList.remove("confirm-button-disabled");
+    } else {
+      // Check if all stops are completed
+      const allCompleted = stopsData.every(e => e.status === "Completed");
+      if (allCompleted) {
         currentStopTitle.innerHTML = "Trip Completed";
         currentStopSchedual.innerHTML = "";
+        confirmButton.classList.add("confirm-button-disabled");
+        confirmButton.innerHTML = "Already Arived!";
       }
     }
 

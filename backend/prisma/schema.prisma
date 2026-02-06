@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -26,11 +26,24 @@ model Trip {
   user_id     Int
   origin      String
   destination String
-  route_json  Json
+  route_json  String
   created_at  DateTime @default(now())
   
   // Relations
   user        User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
   
   @@index([user_id])
+}
+
+model Complaint {
+  id          Int      @id @default(autoincrement())
+  user_id     Int?     // Optional, can be anonymous
+  fullname    String
+  email       String
+  phone       String?
+  type        String
+  route       String?
+  description String
+  status      String   @default("Pending") // Pending, Ongoing, Resolved
+  created_at  DateTime @default(now())
 }

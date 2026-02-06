@@ -138,6 +138,7 @@ function groupStepsByLine(rawPath, graph) {
 // Create detailed instructions from grouped steps
 function createDetailedInstructions(groupedSteps) {
     const detailedSteps = [];
+    let currentTime = new Date(); // Start time simulation
 
     for (let i = 0; i < groupedSteps.length; i++) {
         const group = groupedSteps[i];
@@ -160,29 +161,58 @@ function createDetailedInstructions(groupedSteps) {
             }
         }
 
+        // Calculate Times
+        const departTime = new Date(currentTime);
+        const durationMs = group.duration * 60 * 1000;
+        const arrivalTime = new Date(currentTime.getTime() + durationMs);
+
+        // Calculate Distance (Estimate)
+        let distance = 0;
+        if (group.mode === 'feet') {
+            distance = Math.round(group.duration * 80); // ~4.8 km/h => 80m/min
+        } else {
+            distance = Math.round(group.duration * 500); // ~30 km/h => 500m/min
+        }
+
         detailedSteps.push({
             mean: group.mode,
-            type: group.line,
+            type: group.mode === 'feet' ? 'Walk' : (group.mode === 'transfer' ? 'Transfer' : group.line),
             step_duration: group.duration,
             step_instruction: instruction,
             start_location: group.from,
             end_location: group.to,
-            stops: group.stops,
-            pathCoordinates: group.pathCoordinates // Include coordinates in output
+            stops: stopCount, // Send count (number) instead of array
+            distance: distance,
+            depart: departTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+            arrival: arrivalTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+            pathCoordinates: group.pathCoordinates
         });
+
+        // Update timer for next step
+        currentTime = arrivalTime;
 
         // Add transfer instruction if there's a next step and it's a different line
         if (i < groupedSteps.length - 1) {
             const nextGroup = groupedSteps[i + 1];
             if (nextGroup.mode !== 'feet' && group.mode !== 'feet') {
+                const transferDuration = 2; // 2 min transfer
+                const transferDepart = new Date(currentTime);
+                const transferArrival = new Date(currentTime.getTime() + transferDuration * 60 * 1000);
+
                 detailedSteps.push({
                     mean: 'transfer',
                     type: 'Transfer',
-                    step_duration: 2, // Assume 2 min transfer time
+                    step_duration: transferDuration,
                     step_instruction: `Transfer to ${nextGroup.line} at ${group.to}`,
                     start_location: group.to,
-                    end_location: group.to
+                    end_location: group.to,
+                    distance: 50, // Minimal distance for transfer
+                    stops: 0,
+                    depart: transferDepart.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                    arrival: transferArrival.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
                 });
+
+                currentTime = transferArrival;
             }
         }
     }

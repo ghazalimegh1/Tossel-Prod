@@ -37,6 +37,8 @@ window.addEventListener("resize", () => {
 });
 
 function setupOption(option) {
+  if (option.classList.contains("logout")) return; // Skip logout option
+
   const anchor = option.querySelector("a");
   const text = anchor ? anchor.innerText : option.innerText;
 
@@ -85,28 +87,65 @@ logo.addEventListener("click", () => {
   window.location.href = `../../html/home/home.html${loggedFlag === "true" ? "?logged=true" : ""}`;
 });
 
+function handleLogout() {
+  localStorage.removeItem("authToken");
+  localStorage.removeItem("user");
+  localStorage.removeItem("userRole");
+  window.location.href = "../../html/home/home.html";
+}
+
+document.querySelectorAll(".logout").forEach(btn => {
+  btn.addEventListener("click", handleLogout);
+});
+
 function checkLoginState() {
   const token = localStorage.getItem("authToken");
   const user = localStorage.getItem("user");
+  const userRole = localStorage.getItem("userRole");
   const isLogged = token || user || loggedFlag === "true";
+
+  // Hide/show sections that require authentication
+  const requiresAuthElements = document.querySelectorAll(".requires-auth");
+  requiresAuthElements.forEach((elem) => {
+    elem.style.display = isLogged ? "flex" : "none";
+  });
 
   if (isLogged) {
     document.querySelectorAll(".login").forEach((e) => (e.style.display = "none"));
+    document.querySelectorAll(".profile").forEach((e) => (e.style.display = "flex"));
+    document.querySelectorAll(".logout").forEach((e) => (e.style.display = "flex"));
 
-    // Show profile if it exists (it was commented out in HTML, assuming we uncomment or manage via JS)
-    // Actually, looking at HTML, profile option is there but might need display handling
-    // Let's select by class .profile and ensure it's shown
-    const profileBtn = document.querySelector(".option.profile");
-    if (profileBtn) {
-      profileBtn.style.display = "flex";
+    // If admin, hide all options except Driver Dashboard
+    if (userRole === "admin") {
+      const allOptions = document.querySelectorAll(".nav-container .option, .options-container .option");
+      allOptions.forEach((option) => {
+        const anchor = option.querySelector("a");
+        const text = anchor ? anchor.innerText.trim() : option.innerText.trim();
+
+        // Hide everything except Driver Dashboard, Profile, and Logout
+        if (text &&
+          text !== "Driver Dashboard" &&
+          !option.classList.contains("profile") &&
+          !option.classList.contains("logout")) {
+          option.style.display = "none";
+        }
+      });
+    } else {
+      // Regular user - hide Driver Dashboard
+      const allOptions = document.querySelectorAll(".nav-container .option, .options-container .option");
+      allOptions.forEach((option) => {
+        const anchor = option.querySelector("a");
+        const text = anchor ? anchor.innerText.trim() : option.innerText.trim();
+
+        // Hide Driver Dashboard for regular users
+        if (text && text === "Driver Dashboard") {
+          option.style.display = "none";
+        }
+      });
     }
   } else {
-    // Hide profile if not logged
-    const profileBtn = document.querySelector(".option.profile");
-    if (profileBtn) {
-      profileBtn.style.display = "none";
-    }
-    // Show login
+    document.querySelectorAll(".profile").forEach((e) => (e.style.display = "none"));
+    document.querySelectorAll(".logout").forEach((e) => (e.style.display = "none"));
     document.querySelectorAll(".login").forEach((e) => (e.style.display = "flex"));
   }
 }

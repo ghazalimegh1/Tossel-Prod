@@ -2,137 +2,13 @@
 
 const routes_container = document.getElementById("routes-container");
 let routes = []; // Will be populated from API
-let map;
-let routeLayer;
 
-// Map Initialization
-function initMap() {
-    if (document.getElementById('map')) {
-        map = L.map('map').setView([36.75, 3.05], 11); // Center on Algiers
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '© OpenStreetMap'
-        }).addTo(map);
-    }
-}
-
-// Draw Route on Map with Enhanced Visibility
-function drawRouteOnMap(routeSteps) {
-    if (!map) return;
-
-    // Clear previous layers
-    if (routeLayer) {
-        map.removeLayer(routeLayer);
-    }
-
-    const latlngs = [];
-    const markers = L.layerGroup().addTo(map);
-
-    // Fetch locations to get coordinates for start/end points
-    fetch("/api/routes/locations")
-        .then(res => res.json())
-        .then(data => {
-            const nodes = data.knownLocations;
-            const nodeMap = {};
-            nodes.forEach(n => {
-                if (typeof n === 'object') nodeMap[n.name] = [n.lat, n.lng];
-            });
-
-            routeSteps.forEach((step, index) => {
-                const startCoords = nodeMap[step.start_location];
-                const endCoords = nodeMap[step.end_location];
-
-                // Add start marker
-                if (startCoords) {
-                    if (index === 0) {
-                        // Custom start marker with green color
-                        L.marker(startCoords, {
-                            icon: L.divIcon({
-                                className: 'custom-marker',
-                                html: '<div style="background: #00A63E; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>',
-                                iconSize: [24, 24],
-                                iconAnchor: [12, 12]
-                            })
-                        }).addTo(markers).bindPopup(`<strong>Start:</strong> ${step.start_location}`).openPopup();
-                    } else {
-                        L.circleMarker(startCoords, {
-                            radius: 4,
-                            color: '#fff',
-                            fillColor: getModeColor(step.mean),
-                            fillOpacity: 0.9,
-                            weight: 2
-                        }).addTo(markers).bindPopup(step.start_location);
-                    }
-                }
-
-                // Add end marker
-                if (endCoords && index === routeSteps.length - 1) {
-                    L.marker(endCoords, {
-                        icon: L.divIcon({
-                            className: 'custom-marker',
-                            html: '<div style="background: #E7000B; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>',
-                            iconSize: [24, 24],
-                            iconAnchor: [12, 12]
-                        })
-                    }).addTo(markers).bindPopup(`<strong>End:</strong> ${step.end_location}`);
-                }
-
-                // Add path segment with enhanced visibility
-                if (step.pathCoordinates && step.pathCoordinates.length > 0) {
-                    // Coordinates from backend are [lng, lat], Leaflet needs [lat, lng]
-                    const segmentCoords = step.pathCoordinates.map(coord => [coord[1], coord[0]]);
-                    latlngs.push(...segmentCoords);
-
-                    // Draw segment with enhanced visibility
-                    const color = getModeColor(step.mean);
-                    L.polyline(segmentCoords, {
-                        color: color,
-                        weight: 8,           // Increased from 8 to 8 (thicker)
-                        opacity: 0.85,       // Slightly transparent to see map underneath
-                        lineJoin: 'round',   // Smooth corners
-                        lineCap: 'round'     // Rounded ends
-                    }).addTo(markers).bindPopup(`<strong>${step.type || step.mean}</strong><br>${step.start_location} → ${step.end_location}`);
-                } else {
-                    // Fallback to straight line
-                    if (startCoords && endCoords) {
-                        latlngs.push(startCoords, endCoords);
-                        const color = getModeColor(step.mean);
-                        L.polyline([startCoords, endCoords], {
-                            color: color,
-                            weight: 6,
-                            opacity: 0.7,
-                            dashArray: '10, 8',
-                            lineJoin: 'round',
-                            lineCap: 'round'
-                        }).addTo(markers);
-                    }
-                }
-            });
-
-            // Auto-fit map to show entire route with padding
-            if (latlngs.length > 0) {
-                map.fitBounds(L.polyline(latlngs).getBounds(), {
-                    padding: [60, 60],
-                    maxZoom: 15  // Prevent zooming in too much
-                });
-                routeLayer = markers;
-            }
-        })
-        .catch(e => console.error("Map plotting error:", e));
-}
-
-function getModeColor(mode) {
-    switch (mode) {
-        case 'metro': return '#008236';      // Green for metro
-        case 'tram': return '#8200DB';       // Purple for tram
-        case 'train': return '#F59E0B';      // Amber for train (better visibility)
-        case 'bus': return '#2563EB';        // Brighter blue for bus
-        case 'feet': case 'walk': return '#64748B';  // Gray for walking
-        case 'transfer': return '#EC4899';   // Pink for transfers
-        default: return '#4169E1';           // Royal blue default
-    }
-}
+// Map functions disabled as requested
+// let map;
+// let routeLayer;
+// function initMap() { ... }
+// function drawRouteOnMap(routeSteps) { ... }
+// function getModeColor(mode) { ... }
 
 
 const means_logos = {
@@ -229,8 +105,8 @@ routes_header.innerHTML = `
 
 routes_container.appendChild(routes_header);
 
-// Initialize Map
-initMap();
+// Map disabled
+// initMap();
 
 // Loading state
 const loadingDiv = document.createElement("div");
@@ -249,10 +125,10 @@ fetch(`${API_URL}/find?start=${encodeURIComponent(start)}&destination=${encodeUR
         loadingDiv.remove();
         renderRoutes(routes);
 
-        // Visualize the first route by default
-        if (routes.length > 0) {
-            drawRouteOnMap(routes[0].steps);
-        }
+        // Map visualization disabled
+        // if (routes.length > 0) {
+        //     drawRouteOnMap(routes[0].steps);
+        // }
 
         // Check if user is logged in and show Save Trip button
         checkAuthAndShowSaveButton();
@@ -272,8 +148,8 @@ function selectRoute(rank) {
         return;
     }
 
-    // Visualize Selected Route on Map (New feature)
-    drawRouteOnMap(selectedRoute.steps);
+    // Map visualization disabled
+    // drawRouteOnMap(selectedRoute.steps);
 
     // Store the selected route in sessionStorage
     sessionStorage.setItem('selectedRoute', JSON.stringify(selectedRoute));
@@ -284,7 +160,7 @@ function selectRoute(rank) {
 
     // Added a small delay to allow seeing map update before navigation, or user can click again (UI/UX choice)
     // Actually, sticking to original flow: navigate immediately.
-    // window.location.href = `../../html/chosen_route_page/chosen_route.html${loggedFlag === "true" ? "?logged=true" : ""}`; // Update with your actual page path
+    window.location.href = `../../html/chosen_route_page/chosen_route.html${loggedFlag === "true" ? "?logged=true" : ""}`;
 }
 
 
@@ -558,7 +434,7 @@ async function handleSaveTrip() {
             body: JSON.stringify({
                 origin: start,
                 destination: end,
-                route_json: routeToSave
+                route_json: JSON.stringify(routeToSave)
             })
         });
 

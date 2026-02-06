@@ -13,7 +13,7 @@ body {
 }
 
 
-.chosen-route-header{
+.chosen-route-header {
 
     height: 220px;
     width: 100%;
@@ -28,7 +28,7 @@ body {
     padding: 1.5rem 2rem;
 }
 
-.chosen-route-header-title{
+.chosen-route-header-title {
     width: fit-content;
     font-size: 28px;
     color: #fff;
@@ -38,7 +38,7 @@ body {
     gap: 12px;
 }
 
-.chosen-route-header-subtitle{
+.chosen-route-header-subtitle {
     font-size: 18px;
     color: #fff;
     font-weight: 400;
@@ -139,7 +139,7 @@ body {
 }
 
 .icon {
-    
+
     width: 48px;
     height: 48px;
     border-radius: 12px;
@@ -148,24 +148,28 @@ body {
     justify-content: center;
 }
 
-.feet-bg{
+.feet-bg {
     background-color: #314158;
 }
 
-.bus-bg{
+.bus-bg {
     background-color: #1447E6;
 }
 
-.metro-bg{
+.metro-bg {
     background-color: #00A63E;
 }
 
-.train-bg{
+.train-bg {
     background-color: #00A63E;
 }
 
-.tram-bg{
+.tram-bg {
     background-color: #8200DB;
+}
+
+.transfer-bg {
+    background-color: #EC4899;
 }
 
 .step-type-icon {
@@ -275,8 +279,8 @@ body {
     color: #64748B;
     font-size: clamp(12px, 2vw, 16px);
 
-    p{
-        font-size: clamp(12px, 2vw, 16px) ;
+    p {
+        font-size: clamp(12px, 2vw, 16px);
     }
 }
 
@@ -359,7 +363,7 @@ body {
     }
 }
 
-#not-feet-alt{
+#not-feet-alt {
     border: 1px solid #E2E8F0;
     background-color: white;
     color: #0F172A;
@@ -370,17 +374,17 @@ body {
 
 
 @media (max-width: 480px) {
-    .chosen-route{
+    .chosen-route {
         flex-direction: column;
         align-items: center;
         gap: 24px;
     }
 
-    .chosen-route-container{
+    .chosen-route-container {
         width: 90%;
     }
 
-    .live-updates{
+    .live-updates {
         width: 90%;
     }
 
@@ -394,42 +398,38 @@ body {
 
     #step-duration-responisve {
         font-size: 12px;
-        
+
     }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    .chosen-route{
+    .chosen-route {
         flex-direction: column;
         align-items: center;
         gap: 24px;
     }
 
-    .chosen-route-container{
+    .chosen-route-container {
         width: 90%;
     }
 
-    .live-updates{
+    .live-updates {
         width: 90%;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .chosen-route-container{
+    .chosen-route-container {
         width: 60%;
     }
 
-    .live-updates{
+    .live-updates {
         width: 30%;
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-}
+@media (min-width: 1025px) and (max-width: 1280px) {}
 
-@media (min-width: 1281px) and (max-width: 1536px) {
-}
+@media (min-width: 1281px) and (max-width: 1536px) {}
 
-@media (min-width: 1537px) {
-}
-
+@media (min-width: 1537px) {}

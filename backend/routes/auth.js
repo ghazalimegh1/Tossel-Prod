@@ -136,4 +136,39 @@ router.post('/login', async (req, res) => {
     }
 });
 
+const authMiddleware = require('../middleware/auth');
+
+// GET /api/auth/me - Get current user (protected)
+router.get('/me', authMiddleware, async (req, res) => {
+    try {
+        const user = await prisma.user.findUnique({
+            where: { id: req.user.id },
+            select: {
+                id: true,
+                username: true,
+                email: true,
+                created_at: true
+            }
+        });
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        // Add dummy names if not in DB (since DB only has username)
+        const names = user.username.split('_');
+        const firstName = names[0] || user.username;
+        const lastName = names[1] || '';
+
+        res.json({
+            ...user,
+            firstName: firstName.charAt(0).toUpperCase() + firstName.slice(1),
+            lastName: lastName.charAt(0).toUpperCase() + lastName.slice(1)
+        });
+    } catch (error) {
+        console.error('Get me error:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
 module.exports = router;

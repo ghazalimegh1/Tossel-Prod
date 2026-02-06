@@ -23,11 +23,13 @@ const authRoutes = require('./routes/auth');
 const routeFinderRoutes = require('./routes/routeFinder');
 const driverRoutes = require('./routes/driver');
 const tripsRoutes = require('./routes/trips');
+const complaintsRoutes = require('./routes/complaints');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/routes', routeFinderRoutes);
 app.use('/api/driver', driverRoutes);
 app.use('/api/trips', tripsRoutes);
+app.use('/api/complaints', complaintsRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {
