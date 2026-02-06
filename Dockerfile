@@ -35,5 +35,5 @@ ENV NODE_ENV=production
 ENV PORT=5000
 ENV DATABASE_URL="file:./prisma/dev.db"
 
-# Start the application (Ensure DB is initialized first)
-CMD npx prisma db push --accept-data-loss && node server.js
+# Start the application (Ensure DB is initialized and seeded)
+CMD npx prisma db push --accept-data-loss && npx prisma db seed && node server.js
