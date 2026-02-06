@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const path = require('path');
+const compression = require('compression');
 const { PrismaClient } = require('@prisma/client');
 
 dotenv.config();
@@ -14,9 +15,16 @@ const PORT = process.env.PORT || 5000;
 const prisma = new PrismaClient();
 
 // Middleware
+app.use(compression()); // Enable Gzip compression
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Serve static files from frontend with caching
+app.use(express.static(path.join(__dirname, '../frontend'), {
+    maxAge: '1d', // Cache static files for 1 day
+    etag: true
+}));
 
 // Routes
 const authRoutes = require('./routes/auth');
@@ -36,8 +44,6 @@ app.get('/api/health', (req, res) => {
     res.json({ message: 'Tossal Backend API is running' });
 });
 
-// Serve static files from frontend
-app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Serve home page at root
 app.get('/', (req, res) => {
