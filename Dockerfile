@@ -1,8 +1,8 @@
 # Use Node.js alpine image for a small footprint
 FROM node:18-alpine
 
-# Add OpenSSL 1.1 compatibility for Prisma
-RUN apk add --no-cache openssl1.1-compat
+# Add dependencies for Prisma (libc6-compat is required for Alpine)
+RUN apk add --no-cache libc6-compat openssl
 
 # Set the working directory
 WORKDIR /app
